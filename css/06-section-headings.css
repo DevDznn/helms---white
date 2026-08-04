@@ -1,0 +1,30 @@
+.intro {
+  padding-block: clamp(68px, 7vw, 96px);
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.72fr);
+  align-items: end;
+  gap: clamp(42px, 7vw, 96px);
+}
+
+.intro__heading h2 {
+  max-width: 730px;
+  margin-bottom: 0;
+  font-size: clamp(2.4rem, 4.3vw, 4.45rem);
+}
+
+.intro__copy {
+  max-width: 510px;
+  padding-bottom: 4px;
+}
+
+.intro__copy .lead-copy {
+  color: var(--text);
+  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  line-height: 1.65;
+}
+

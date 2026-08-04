@@ -1,0 +1,37 @@
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .hero__media video {
+    display: none;
+  }
+
+  .hero__content,
+  .hero-card {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__media video {
+    display: block;
+  }
+
+  .hero__content {
+    animation: none;
+  }
+
+  .hero__scroll i::after {
+    animation: none;
+  }
+}
