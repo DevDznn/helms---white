@@ -25,21 +25,28 @@
 
 .trust-strip article {
   display: grid;
-  grid-template-columns: 54px 1fr;
+  grid-template-columns: 54px minmax(0, 1fr);
   min-height: 132px;
   align-items: center;
   gap: 18px;
   padding: 26px 28px;
-  transition: background-color var(--ease);
+  transition:
+    background-color var(--ease),
+    transform var(--ease);
 }
 
 .trust-strip article:hover {
-  background: var(--aqua);
+  background: rgba(234, 249, 251, 0.58);
 }
 
-.trust-strip article + article {
-  border-left: 1px solid var(--border);
+.trust-strip article:hover .trust-strip__visual {
+  transform: translateY(-2px);
 }
+
+.trust-strip__visual {
+  transition: transform var(--ease);
+}
+
 
 .trust-strip__number,
 .trust-strip__icon {
@@ -66,6 +73,94 @@
   max-width: 230px;
   color: var(--text);
   font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   Highlight visuals
+   ========================================================= */
+
+.trust-strip__visual {
+  position: relative;
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  flex: 0 0 54px;
+}
+
+/* Small detail adds interest without making it busy */
+
+.trust-strip__visual::after {
+  position: absolute;
+  right: 1px;
+  bottom: 2px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+.trust-strip__number,
+.trust-strip__icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--brand-deep);
+  background: var(--white);
+}
+
+.trust-strip__number {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+/* Prevent SVG from appearing as a solid shape */
+
+.trust-strip__icon {
+  padding: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Slightly distinguish the guidance item */
+
+.trust-strip__visual--guidance .trust-strip__icon {
+  border-color: rgba(1, 181, 204, 0.22);
+  background: var(--aqua);
+}
+
+/* Content hierarchy */
+
+.trust-strip__content {
+  min-width: 0;
+}
+
+.trust-strip__label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.trust-strip p {
+  max-width: 230px;
+  color: var(--text);
+  font-size: 0.79rem;
   line-height: 1.45;
 }
 
@@ -117,5 +212,28 @@
   .trust-strip p {
     max-width: none;
     font-size: 0.78rem;
+  }
+
+  .trust-strip__visual {
+    width: 46px;
+    height: 46px;
+  }
+
+  .trust-strip__number,
+  .trust-strip__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .trust-strip__icon {
+    padding: 11px;
+  }
+
+  .trust-strip__number {
+    font-size: 1.05rem;
+  }
+
+  .trust-strip__label {
+    font-size: 0.84rem;
   }
 }

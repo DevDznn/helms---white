@@ -1,31 +1,27 @@
 :root {
   --brand: #01b5cc;
-  --brand-deep: #006b78;
-  --brand-dark: #00525d;
-  --ink: #15343b;
-  --text: #51666b;
+  --brand-deep: #167985;
+  --brand-dark: #12636d;
+  --ink: #31545a;
+  --text: #667b7f;
   --white: #ffffff;
-  --aqua: #eaf9fb;
-  --aqua-strong: #d7f3f6;
-  --ivory: #faf7f2;
+  --aqua: #edf9fa;
+  --aqua-strong: #d9f1f3;
+  --ivory: #fbf8f4;
   --mist: #f5f8f8;
-  --border: #d8e6e8;
-  --warm: #ead5bd;
+  --border: #dce7e8;
+  --warm: #ead8c4;
   --font-heading: "Manrope", "Avenir Next", Avenir, Arial, sans-serif;
   --font-body: "Source Sans 3", Inter, Arial, sans-serif;
   --container: min(1240px, calc(100% - 48px));
   --section-space: clamp(90px, 10vw, 150px);
-  --shadow-sm: 0 16px 44px rgba(21, 52, 59, 0.08);
-  --shadow-md: 0 30px 80px rgba(21, 52, 59, 0.14);
+  --shadow-sm: 0 16px 44px rgba(49, 84, 90, 0.07);
+  --shadow-md: 0 30px 80px rgba(49, 84, 90, 0.12);
   --radius-sm: 14px;
   --radius-md: 24px;
   --radius-lg: 38px;
   --ease: 220ms ease;
-
-  /* The top bar is hidden */
   --topbar-height: 0px;
-
-  /* Desktop fixed navigation height */
   --header-height: 76px;
 }
 
@@ -46,6 +42,7 @@ body {
   font-size: 17px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body.menu-open {
@@ -65,11 +62,8 @@ a {
 }
 
 button {
-  font: inherit;
-}
-
-button {
   border: 0;
+  font: inherit;
 }
 
 ::selection {
@@ -104,15 +98,21 @@ button {
   top: 12px;
   left: 12px;
   padding: 10px 16px;
+  border-radius: 8px;
   color: var(--white);
   background: var(--ink);
-  border-radius: 8px;
   transform: translateY(-140%);
   transition: transform var(--ease);
 }
 
 .skip-link:focus {
   transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(1, 181, 204, 0.3);
+  outline-offset: 3px;
 }
 
 h1,
@@ -133,6 +133,12 @@ h4 {
   letter-spacing: -0.04em;
 }
 
+h1,
+h2 {
+  color: #31545a;
+  font-weight: 600;
+}
+
 h1 {
   font-size: clamp(3.2rem, 6.1vw, 6.5rem);
 }
@@ -140,6 +146,12 @@ h1 {
 h2 {
   margin-bottom: 24px;
   font-size: clamp(2.3rem, 4.2vw, 4.4rem);
+}
+
+h3,
+h4 {
+  color: #294a50;
+  font-weight: 650;
 }
 
 h3 {
@@ -151,19 +163,14 @@ p {
 }
 
 .lead-copy {
+  color: var(--text);
   font-size: clamp(1.08rem, 1.6vw, 1.26rem);
   line-height: 1.65;
 }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid rgba(1, 181, 204, 0.35);
-  outline-offset: 3px;
-}
-
 @media (max-width: 1120px) {
   :root {
-    --container: min(100% - 36px, 1060px);
+    --container: min(1060px, calc(100% - 36px));
   }
 }
 
