@@ -1,0 +1,39 @@
+.page-contact {
+  --contact-section-space: clamp(74px, 6.5vw, 102px);
+
+  overflow-x: hidden;
+}
+
+.page-contact .site-nav a[aria-current="page"] {
+  color: var(--brand-deep);
+}
+
+.page-contact .site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.page-contact main > .section {
+  padding-block: var(--contact-section-space);
+}
+
+.page-contact main section[id] {
+  scroll-margin-top: calc(var(--header-height) + 22px);
+}
+
+.page-contact main h1,
+.page-contact main h2,
+.page-contact main h3 {
+  text-wrap: balance;
+}
+
+@media (max-width: 900px) {
+  .page-contact {
+    --contact-section-space: 68px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page-contact {
+    --contact-section-space: 54px;
+  }
+}

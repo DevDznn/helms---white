@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Request a dental appointment with Helms & White Dental in Lismore using a simple step-by-step booking form."
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Book an Appointment | Helms &amp; White Dental</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/pages/booking.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Book an Appointment | Helms & White Dental",
+        "description": "Request a dental appointment with Helms & White Dental in Lismore.",
+        "url": "https://helmsandwhite.com.au/booking/",
+        "about": {
+          "@type": "Dentist",
+          "name": "Helms & White Dental",
+          "telephone": "+61 2 6621 9933",
+          "email": "reception@helmsandwhite.com.au",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "24 Conway Street",
+            "addressLocality": "Lismore",
+            "addressRegion": "NSW",
+            "postalCode": "2480",
+            "addressCountry": "AU"
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body class="page-booking">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" data-js="site-header">
+      <div class="container site-header__inner">
+        <a
+          class="site-header__brand"
+          href="../index.html"
+          aria-label="Helms and White Dental home"
+        >
+          <img
+            src="../assets/images/brand/logo-primary.png"
+            alt="Helms &amp; White Dental"
+            width="251"
+            height="124"
+          />
+        </a>
+
+        <button
+          class="site-header__menu-toggle"
+          type="button"
+          aria-controls="site-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation"
+          data-js="menu-toggle"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav
+          class="site-nav"
+          id="site-navigation"
+          aria-label="Primary navigation"
+          data-js="site-nav"
+        >
+          <a href="our-story.html">Our story</a>
+          <a href="services.html">Services</a>
+          <a href="dentists.html">Dentists</a>
+          <a href="payments.html">Payments</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <a
+            class="site-header__phone"
+            href="tel:+61266219933"
+            aria-label="Call Helms and White Dental"
+          >
+            (02) 6621 9933
+          </a>
+
+          <a
+            class="button button--primary site-header__cta"
+            href="booking.html"
+            aria-current="page"
+          >
+            Book now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="booking-wizard" aria-labelledby="booking-wizard-title">
+        <div class="container booking-wizard__shell">
+          <aside class="booking-progress" aria-label="Booking progress">
+            <div class="booking-progress__brand">
+              <p>Appointment request</p>
+
+              <h1 id="booking-wizard-title">Book your dental visit.</h1>
+
+              <p>
+                Complete each step and review your details before sending the
+                request to reception.
+              </p>
+            </div>
+
+            <ol class="booking-progress__list">
+              <li class="is-active" data-progress-step="1" aria-current="step">
+                <span>01</span>
+                <div>
+                  <strong>Patient type</strong>
+                  <small>New or existing patient</small>
+                </div>
+              </li>
+
+              <li data-progress-step="2">
+                <span>02</span>
+                <div>
+                  <strong>Service</strong>
+                  <small>Reason for the visit</small>
+                </div>
+              </li>
+
+              <li data-progress-step="3">
+                <span>03</span>
+                <div>
+                  <strong>Dentist</strong>
+                  <small>Select a preference</small>
+                </div>
+              </li>
+
+              <li data-progress-step="4">
+                <span>04</span>
+                <div>
+                  <strong>Date and time</strong>
+                  <small>Your preferred appointment</small>
+                </div>
+              </li>
+
+              <li data-progress-step="5">
+                <span>05</span>
+                <div>
+                  <strong>Your details</strong>
+                  <small>How reception can contact you</small>
+                </div>
+              </li>
+
+              <li data-progress-step="6">
+                <span>06</span>
+                <div>
+                  <strong>Review</strong>
+                  <small>Check and send</small>
+                </div>
+              </li>
+            </ol>
+
+            <div class="booking-progress__help">
+              <p>Urgent dental concern?</p>
+              <a href="tel:+61266219933">(02) 6621 9933</a>
+              <span>
+                Call for severe pain, swelling, bleeding or dental trauma.
+              </span>
+            </div>
+          </aside>
+
+          <div class="booking-panel">
+            <div class="booking-panel__mobile-progress" aria-live="polite">
+              <span data-mobile-step>Step 1 of 6</span>
+              <div aria-hidden="true">
+                <i data-progress-bar></i>
+              </div>
+            </div>
+
+            <!--
+              Connect this form to your preferred backend or form service.
+              The action="#" value is a front-end placeholder.
+            -->
+            <form
+              class="booking-form"
+              id="booking-form"
+              action="#"
+              method="post"
+              novalidate
+            >
+              <!-- =============================================
+                   Step 1: Patient type
+                   ============================================= -->
+              <fieldset class="booking-step is-active" data-booking-step="1">
+                <legend class="sr-only">Patient type</legend>
+
+                <header class="booking-step__header">
+                  <p class="booking-step__eyebrow">Step 1 of 6</p>
+                  <h2>Have you visited us before?</h2>
+                  <p>
+                    This helps reception prepare the right appointment details.
+                  </p>
+                </header>
+
+                <div class="choice-grid choice-grid--two">
+                  <label class="choice-card">
+                    <input
+                      type="radio"
+                      name="patient-type"
+                      value="New patient"
+                      required
+                    />
+
+                    <span class="choice-card__marker">01</span>
+
+                    <span class="choice-card__content">
+                      <strong>New patient</strong>
+                      <small>
+                        This will be my first appointment at Helms &amp; White
+                        Dental.
+                      </small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card">
+                    <input
+                      type="radio"
+                      name="patient-type"
+                      value="Existing patient"
+                      required
+                    />
+
+                    <span class="choice-card__marker">02</span>
+
+                    <span class="choice-card__content">
+                      <strong>Existing patient</strong>
+                      <small> I have attended the practice before. </small>
+                    </span>
+                  </label>
+                </div>
+
+                <div
+                  class="conditional-field"
+                  data-existing-patient-fields
+                  hidden
+                >
+                  <div class="form-field">
+                    <label for="last-visit">
+                      Approximate date of your last visit
+                      <span>Optional</span>
+                    </label>
+
+                    <input id="last-visit" name="last-visit" type="month" />
+                  </div>
+                </div>
+
+                <p
+                  class="booking-step__error"
+                  data-step-error
+                  aria-live="polite"
+                ></p>
+              </fieldset>
+
+              <!-- =============================================
+                   Step 2: Service
+                   ============================================= -->
+              <fieldset class="booking-step" data-booking-step="2" hidden>
+                <legend class="sr-only">Service</legend>
+
+                <header class="booking-step__header">
+                  <p class="booking-step__eyebrow">Step 2 of 6</p>
+                  <h2>What do you need help with?</h2>
+                  <p>
+                    Choose the closest option. Reception can adjust the
+                    appointment type after reviewing your request.
+                  </p>
+                </header>
+
+                <div class="choice-grid choice-grid--services">
+                  <label class="choice-card choice-card--service">
+                    <input
+                      type="radio"
+                      name="service"
+                      value="Check-up and preventive care"
+                      required
+                    />
+                    <span class="choice-card__marker">01</span>
+                    <span class="choice-card__content">
+                      <strong>Check-up &amp; preventive care</strong>
+                      <small>Examination, clean and routine maintenance</small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--service">
+                    <input
+                      type="radio"
+                      name="service"
+                      value="Fillings and restorations"
+                      required
+                    />
+                    <span class="choice-card__marker">02</span>
+                    <span class="choice-card__content">
+                      <strong>Fillings &amp; restorations</strong>
+                      <small>Repairing decay, chips or damaged teeth</small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--service">
+                    <input
+                      type="radio"
+                      name="service"
+                      value="Root canal therapy"
+                      required
+                    />
+                    <span class="choice-card__marker">03</span>
+                    <span class="choice-card__content">
+                      <strong>Root canal therapy</strong>
+                      <small>Assessment of pain or an infected tooth</small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--service">
+                    <input
+                      type="radio"
+                      name="service"
+                      value="Dental crowns"
+                      required
+                    />
+                    <span class="choice-card__marker">04</span>
+                    <span class="choice-card__content">
+                      <strong>Dental crowns</strong>
+                      <small
+                        >Strengthening a weakened or heavily restored
+                        tooth</small
+                      >
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--service">
+                    <input
+                      type="radio"
+                      name="service"
+                      value="Tooth whitening"
+                      required
+                    />
+                    <span class="choice-card__marker">05</span>
+                    <span class="choice-card__content">
+                      <strong>Tooth whitening</strong>
+                      <small>Discussing professional whitening options</small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--service">
+                    <input
+                      type="radio"
+                      name="service"
+                      value="Dental veneers"
+                      required
+                    />
+                    <span class="choice-card__marker">06</span>
+                    <span class="choice-card__content">
+                      <strong>Dental veneers</strong>
+                      <small>Consultation for cosmetic tooth changes</small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--service">
+                    <input
+                      type="radio"
+                      name="service"
+                      value="Dental pain or urgent concern"
+                      required
+                    />
+                    <span class="choice-card__marker">07</span>
+                    <span class="choice-card__content">
+                      <strong>Dental pain or urgent concern</strong>
+                      <small
+                        >Pain, swelling, a broken tooth or lost filling</small
+                      >
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--service">
+                    <input
+                      type="radio"
+                      name="service"
+                      value="Other or not sure"
+                      required
+                    />
+                    <span class="choice-card__marker">08</span>
+                    <span class="choice-card__content">
+                      <strong>Other / not sure</strong>
+                      <small
+                        >Reception can help select the right appointment</small
+                      >
+                    </span>
+                  </label>
+                </div>
+
+                <div class="form-field booking-step__message">
+                  <label for="service-note">
+                    Brief description
+                    <span>Optional</span>
+                  </label>
+
+                  <textarea
+                    id="service-note"
+                    name="service-note"
+                    rows="4"
+                    placeholder="For example: sensitivity in a lower tooth, a lost filling, or a whitening consultation."
+                  ></textarea>
+                </div>
+
+                <p
+                  class="booking-step__error"
+                  data-step-error
+                  aria-live="polite"
+                ></p>
+              </fieldset>
+
+              <!-- =============================================
+                   Step 3: Dentist
+                   ============================================= -->
+              <fieldset class="booking-step" data-booking-step="3" hidden>
+                <legend class="sr-only">Preferred dentist</legend>
+
+                <header class="booking-step__header">
+                  <p class="booking-step__eyebrow">Step 3 of 6</p>
+                  <h2>Do you have a preferred dentist?</h2>
+                  <p>
+                    Selecting “any available dentist” may provide more
+                    appointment options.
+                  </p>
+                </header>
+
+                <div class="choice-grid choice-grid--dentists">
+                  <label class="choice-card choice-card--dentist">
+                    <input
+                      type="radio"
+                      name="dentist"
+                      value="Any available dentist"
+                      required
+                    />
+                    <span class="choice-card__marker">Any</span>
+                    <span class="choice-card__content">
+                      <strong>Any available dentist</strong>
+                      <small>Show the broadest range of suitable times</small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--dentist">
+                    <input
+                      type="radio"
+                      name="dentist"
+                      value="Dr Graeme Helms"
+                      required
+                    />
+                    <span class="choice-card__marker">GH</span>
+                    <span class="choice-card__content">
+                      <strong>Dr Graeme Helms</strong>
+                      <small>Dentist · Practice principal</small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--dentist">
+                    <input
+                      type="radio"
+                      name="dentist"
+                      value="Dr Brendan White"
+                      required
+                    />
+                    <span class="choice-card__marker">BW</span>
+                    <span class="choice-card__content">
+                      <strong>Dr Brendan White</strong>
+                      <small>Dentist · Practice principal</small>
+                    </span>
+                  </label>
+
+                  <label class="choice-card choice-card--dentist">
+                    <input
+                      type="radio"
+                      name="dentist"
+                      value="Dr Dongyoung Lee"
+                      required
+                    />
+                    <span class="choice-card__marker">DL</span>
+                    <span class="choice-card__content">
+                      <strong>Dr Dongyoung Lee</strong>
+                      <small>Dentist</small>
+                    </span>
+                  </label>
+                </div>
+
+                <p class="booking-step__availability-note">
+                  Dentist availability is confirmed after reception reviews the
+                  selected service, date and appointment length.
+                </p>
+
+                <p
+                  class="booking-step__error"
+                  data-step-error
+                  aria-live="polite"
+                ></p>
+              </fieldset>
+
+              <!-- =============================================
+                   Step 4: Date and time
+                   ============================================= -->
+              <fieldset class="booking-step" data-booking-step="4" hidden>
+                <legend class="sr-only">Preferred date and time</legend>
+
+                <header class="booking-step__header">
+                  <p class="booking-step__eyebrow">Step 4 of 6</p>
+                  <h2>When would you prefer to visit?</h2>
+                  <p>
+                    Choose a preferred date and time. Reception will confirm the
+                    closest suitable appointment.
+                  </p>
+                </header>
+
+                <div class="date-grid">
+                  <div class="form-field">
+                    <label for="preferred-date">Preferred date</label>
+                    <input
+                      id="preferred-date"
+                      name="preferred-date"
+                      type="date"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="preferred-time">Preferred time</label>
+                    <select id="preferred-time" name="preferred-time" required>
+                      <option value="" selected disabled>Select a time</option>
+                      <option value="First available">First available</option>
+                      <option value="Morning — 8:30am to 11:30am">
+                        Morning — 8:30am to 11:30am
+                      </option>
+                      <option value="Midday — 11:30am to 2:00pm">
+                        Midday — 11:30am to 2:00pm
+                      </option>
+                      <option value="Afternoon — 2:00pm to 5:00pm">
+                        Afternoon — 2:00pm to 5:00pm
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="alternate-date">
+                      Alternate date
+                      <span>Optional</span>
+                    </label>
+                    <input
+                      id="alternate-date"
+                      name="alternate-date"
+                      type="date"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="day-flexibility">Flexibility</label>
+                    <select id="day-flexibility" name="day-flexibility">
+                      <option value="Selected dates only">
+                        Selected dates only
+                      </option>
+                      <option value="Within the same week">
+                        Within the same week
+                      </option>
+                      <option value="Any weekday">Any weekday</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="booking-step__hours">
+                  <span>Practice hours</span>
+                  <strong>Monday–Friday · 8:30am–5:00pm</strong>
+                </div>
+
+                <p
+                  class="booking-step__error"
+                  data-step-error
+                  aria-live="polite"
+                ></p>
+              </fieldset>
+
+              <!-- =============================================
+                   Step 5: Personal details
+                   ============================================= -->
+              <fieldset class="booking-step" data-booking-step="5" hidden>
+                <legend class="sr-only">Personal details</legend>
+
+                <header class="booking-step__header">
+                  <p class="booking-step__eyebrow">Step 5 of 6</p>
+                  <h2>Who is the appointment for?</h2>
+                  <p>
+                    Provide the patient’s details and the best way for reception
+                    to confirm the appointment.
+                  </p>
+                </header>
+
+                <div class="personal-details">
+                  <div class="form-field personal-details__full">
+                    <label for="patient-name">Patient full name</label>
+                    <input
+                      id="patient-name"
+                      name="patient-name"
+                      type="text"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="date-of-birth">Date of birth</label>
+                    <input
+                      id="date-of-birth"
+                      name="date-of-birth"
+                      type="date"
+                      autocomplete="bday"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="booking-for">I am booking for</label>
+                    <select id="booking-for" name="booking-for" required>
+                      <option value="" selected disabled>
+                        Select an option
+                      </option>
+                      <option value="Myself">Myself</option>
+                      <option value="My child">My child</option>
+                      <option value="Another person">Another person</option>
+                    </select>
+                  </div>
+
+                  <div
+                    class="form-field personal-details__full"
+                    data-booker-name-field
+                    hidden
+                  >
+                    <label for="booker-name">Your full name</label>
+                    <input
+                      id="booker-name"
+                      name="booker-name"
+                      type="text"
+                      autocomplete="name"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="phone">Phone number</label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="email">Email address</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="contact-method">Preferred contact</label>
+                    <select id="contact-method" name="contact-method" required>
+                      <option value="" selected disabled>
+                        Select an option
+                      </option>
+                      <option value="Phone call">Phone call</option>
+                      <option value="SMS">SMS</option>
+                      <option value="Email">Email</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="health-fund">
+                      Private health fund
+                      <span>Optional</span>
+                    </label>
+                    <input id="health-fund" name="health-fund" type="text" />
+                  </div>
+
+                  <label class="booking-consent personal-details__full">
+                    <input
+                      name="request-consent"
+                      type="checkbox"
+                      value="Agreed"
+                      required
+                    />
+                    <span>
+                      I understand this is an appointment request and the visit
+                      is not confirmed until reception contacts me.
+                    </span>
+                  </label>
+                </div>
+
+                <p
+                  class="booking-step__error"
+                  data-step-error
+                  aria-live="polite"
+                ></p>
+              </fieldset>
+
+              <!-- =============================================
+                   Step 6: Review
+                   ============================================= -->
+              <fieldset class="booking-step" data-booking-step="6" hidden>
+                <legend class="sr-only">Review appointment request</legend>
+
+                <header class="booking-step__header">
+                  <p class="booking-step__eyebrow">Step 6 of 6</p>
+                  <h2>Review your appointment request.</h2>
+                  <p>
+                    Check the details below before sending them to reception.
+                  </p>
+                </header>
+
+                <div class="booking-review" data-booking-review>
+                  <section>
+                    <header>
+                      <h3>Appointment</h3>
+                      <button type="button" data-edit-step="1">Edit</button>
+                    </header>
+
+                    <dl>
+                      <div>
+                        <dt>Patient type</dt>
+                        <dd data-review="patient-type">—</dd>
+                      </div>
+                      <div>
+                        <dt>Service</dt>
+                        <dd data-review="service">—</dd>
+                      </div>
+                      <div>
+                        <dt>Dentist</dt>
+                        <dd data-review="dentist">—</dd>
+                      </div>
+                    </dl>
+                  </section>
+
+                  <section>
+                    <header>
+                      <h3>Preferred time</h3>
+                      <button type="button" data-edit-step="4">Edit</button>
+                    </header>
+
+                    <dl>
+                      <div>
+                        <dt>Date</dt>
+                        <dd data-review="preferred-date">—</dd>
+                      </div>
+                      <div>
+                        <dt>Time</dt>
+                        <dd data-review="preferred-time">—</dd>
+                      </div>
+                      <div>
+                        <dt>Alternate date</dt>
+                        <dd data-review="alternate-date">Not selected</dd>
+                      </div>
+                    </dl>
+                  </section>
+
+                  <section>
+                    <header>
+                      <h3>Patient details</h3>
+                      <button type="button" data-edit-step="5">Edit</button>
+                    </header>
+
+                    <dl>
+                      <div>
+                        <dt>Name</dt>
+                        <dd data-review="patient-name">—</dd>
+                      </div>
+                      <div>
+                        <dt>Date of birth</dt>
+                        <dd data-review="date-of-birth">—</dd>
+                      </div>
+                      <div>
+                        <dt>Phone</dt>
+                        <dd data-review="phone">—</dd>
+                      </div>
+                      <div>
+                        <dt>Email</dt>
+                        <dd data-review="email">—</dd>
+                      </div>
+                    </dl>
+                  </section>
+                </div>
+
+                <div class="booking-review__notice">
+                  <strong>This does not confirm the appointment.</strong>
+                  <p>
+                    Reception will check service length, dentist availability
+                    and your preferred date before contacting you.
+                  </p>
+                </div>
+
+                <p
+                  class="booking-step__error"
+                  data-step-error
+                  aria-live="polite"
+                ></p>
+              </fieldset>
+
+              <div class="booking-navigation">
+                <button
+                  class="booking-navigation__back"
+                  type="button"
+                  data-booking-back
+                  hidden
+                >
+                  <span aria-hidden="true">←</span>
+                  Back
+                </button>
+
+                <button
+                  class="button button--primary button--large"
+                  type="button"
+                  data-booking-next
+                >
+                  Continue
+                </button>
+
+                <button
+                  class="button button--primary button--large"
+                  type="submit"
+                  data-booking-submit
+                  hidden
+                >
+                  Send appointment request
+                </button>
+              </div>
+
+              <p class="booking-form__privacy">
+                Please avoid entering detailed medical or financial information.
+                Reception can collect any required clinical information
+                securely.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__main">
+        <div class="site-footer__brand">
+          <a
+            class="site-footer__logo"
+            href="../index.html"
+            aria-label="Helms and White Dental home"
+          >
+            <img
+              src="../assets/images/brand/logo-reversed.png"
+              alt="Helms &amp; White Dental"
+              width="251"
+              height="124"
+            />
+          </a>
+
+          <p>
+            Established dental care for Lismore and the Northern Rivers,
+            combining local experience with modern, patient-focused dentistry.
+          </p>
+
+          <div class="site-footer__accreditation">
+            <img
+              src="../assets/images/brand/accreditation-badge.png"
+              alt="Dental Practice Accredited by Quality Innovation Performance"
+              width="162"
+              height="79"
+              loading="lazy"
+              decoding="async"
+            />
+            <span>
+              Accredited practice standards supporting safe and consistent care.
+            </span>
+          </div>
+        </div>
+
+        <nav class="site-footer__links" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <a href="our-story.html"
+            ><span>Our story</span><i aria-hidden="true">↗</i></a
+          >
+          <a href="services.html"
+            ><span>Services</span><i aria-hidden="true">↗</i></a
+          >
+          <a href="../index.html#new-patients"
+            ><span>New patients</span><i aria-hidden="true">↗</i></a
+          >
+          <a href="dentists.html"
+            ><span>Meet the dentists</span><i aria-hidden="true">↗</i></a
+          >
+          <a href="blog.html"
+            ><span>Dental advice</span><i aria-hidden="true">↗</i></a
+          >
+        </nav>
+
+        <div class="site-footer__contact">
+          <h2>Contact</h2>
+          <a href="tel:+61266219933">
+            <small>Phone</small>
+            <strong>(02) 6621 9933</strong>
+          </a>
+          <a href="mailto:reception@helmsandwhite.com.au">
+            <small>Email</small>
+            <strong>reception@helmsandwhite.com.au</strong>
+          </a>
+          <a
+            href="https://maps.google.com/?q=24+Conway+Street+Lismore+NSW+2480"
+            target="_blank"
+            rel="noopener"
+          >
+            <small>Visit</small>
+            <strong>24 Conway Street<br />Lismore NSW 2480</strong>
+          </a>
+        </div>
+
+        <div class="site-footer__booking">
+          <p class="site-footer__booking-label">Appointments</p>
+          <h2>Ready to plan your visit?</h2>
+          <p>
+            Book online or call reception and we will help you select the right
+            appointment.
+          </p>
+          <div class="site-footer__hours">
+            <span>Monday–Friday</span>
+            <strong>8:30am–5:00pm</strong>
+          </div>
+          <a class="button button--white button--full" href="booking.html">
+            Book online
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="container site-footer__bottom">
+        <p>
+          © <span id="current-year" data-js="current-year">2026</span>
+          Helms &amp; White Dental. All rights reserved.
+        </p>
+        <p class="site-footer__location">Lismore · Northern Rivers · NSW</p>
+        <div class="site-footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-actions" aria-label="Quick booking actions">
+      <a href="tel:+61266219933">Call clinic</a>
+      <a href="booking.html">Book online</a>
+    </div>
+
+    <script src="../assets/js/site.js" defer></script>
+    <script src="../assets/js/booking.js" defer></script>
+  </body>
+</html>

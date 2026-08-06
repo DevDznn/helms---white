@@ -1,0 +1,39 @@
+.page-blog {
+  --blog-section-space: clamp(72px, 6.5vw, 102px);
+
+  overflow-x: hidden;
+}
+
+.page-blog .site-nav a[aria-current="page"] {
+  color: var(--brand-deep);
+}
+
+.page-blog .site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.page-blog main > .section {
+  padding-block: var(--blog-section-space);
+}
+
+.page-blog main section[id] {
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+.page-blog main h1,
+.page-blog main h2,
+.page-blog main h3 {
+  text-wrap: balance;
+}
+
+@media (max-width: 900px) {
+  .page-blog {
+    --blog-section-space: 68px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page-blog {
+    --blog-section-space: 54px;
+  }
+}
