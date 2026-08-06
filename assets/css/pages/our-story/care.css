@@ -1,0 +1,123 @@
+.story-care {
+  position: relative;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.68);
+  background:
+    linear-gradient(120deg, rgba(18, 99, 109, 0.98), rgba(22, 121, 133, 0.96)),
+    var(--brand-deep);
+}
+
+.story-care::before,
+.story-care::after {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  content: "";
+}
+
+.story-care::before {
+  top: -250px;
+  right: 12%;
+  width: 520px;
+  height: 520px;
+}
+
+.story-care::after {
+  right: -180px;
+  bottom: -260px;
+  width: 620px;
+  height: 620px;
+}
+
+.story-care__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(66px, 10vw, 150px);
+}
+
+.story-care__content h2 {
+  max-width: 620px;
+  margin-bottom: 26px;
+  color: var(--white);
+}
+
+.story-care__content > p:not(.eyebrow) {
+  max-width: 570px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.08rem;
+}
+
+.story-care__content .button {
+  margin-top: 36px;
+}
+
+.story-care__steps {
+  display: grid;
+}
+
+.story-care__steps article {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 25px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.story-care__steps article:first-child {
+  padding-top: 0;
+}
+
+.story-care__steps article:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.story-care__steps article > span {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  color: var(--brand);
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.story-care__steps h3 {
+  margin-bottom: 10px;
+  color: var(--white);
+  font-size: 1.35rem;
+}
+
+.story-care__steps p {
+  max-width: 570px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .story-care__grid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 680px) {
+  .story-care__steps article {
+    grid-template-columns: 52px 1fr;
+    gap: 18px;
+  }
+
+  .story-care__steps article > span {
+    width: 48px;
+    height: 48px;
+  }
+}

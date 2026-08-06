@@ -1,0 +1,242 @@
+/* =========================================================
+   Our Story: Page-level settings and spacing rhythm
+   ========================================================= */
+
+.page-our-story {
+  /* The global landing-page section spacing reaches 150px.
+     This page uses a tighter editorial rhythm. */
+  --section-space: clamp(72px, 5.5vw, 92px);
+
+  overflow-x: hidden;
+}
+
+.page-our-story .site-nav a[aria-current="page"] {
+  color: var(--brand-deep);
+}
+
+.page-our-story .site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.page-our-story main section[id] {
+  scroll-margin-top: calc(var(--header-height) + 20px);
+}
+
+/* =========================================================
+   Shared section heading rhythm
+   ========================================================= */
+
+.page-our-story main > .section .eyebrow,
+.page-our-story .story-care .eyebrow,
+.page-our-story .story-promise .eyebrow,
+.page-our-story .story-cta .eyebrow {
+  margin-bottom: 18px;
+}
+
+.page-our-story main > .section h2 {
+  margin-top: 0;
+}
+
+/* =========================================================
+   Intro
+   ========================================================= */
+
+.page-our-story .story-intro__grid {
+  gap: clamp(52px, 7vw, 96px);
+}
+
+.page-our-story .story-intro__copy {
+  gap: 20px;
+  padding-top: clamp(18px, 2vw, 28px);
+}
+
+/* =========================================================
+   History
+   ========================================================= */
+
+.page-our-story .story-history__header {
+  gap: clamp(36px, 6vw, 76px);
+  margin-bottom: clamp(48px, 5vw, 66px);
+}
+
+.page-our-story .story-history__layout {
+  gap: clamp(52px, 7vw, 88px);
+}
+
+.page-our-story .story-timeline__item {
+  padding-bottom: 42px;
+}
+
+.page-our-story .story-timeline__content {
+  padding-bottom: 32px;
+}
+
+/* =========================================================
+   Gallery
+   ========================================================= */
+
+.page-our-story .story-gallery__header {
+  gap: clamp(34px, 6vw, 72px);
+  margin-bottom: clamp(42px, 4.5vw, 58px);
+}
+
+/* =========================================================
+   Values
+   ========================================================= */
+
+.page-our-story .story-values__header {
+  margin-bottom: clamp(42px, 4.8vw, 60px);
+}
+
+.page-our-story .story-value-card {
+  min-height: 320px;
+  padding: 36px 28px 34px;
+}
+
+.page-our-story .story-value-card__icon {
+  margin-bottom: 38px;
+}
+
+/* =========================================================
+   Care philosophy
+   ========================================================= */
+
+.page-our-story .story-care {
+  padding-block: var(--section-space);
+}
+
+.page-our-story .story-care__grid {
+  gap: clamp(52px, 7vw, 92px);
+}
+
+.page-our-story .story-care__steps article {
+  padding-block: 24px;
+}
+
+/* =========================================================
+   Practice today
+   ========================================================= */
+
+.page-our-story .story-today__grid {
+  gap: clamp(54px, 7vw, 94px);
+}
+
+/* =========================================================
+   Promise
+   ========================================================= */
+
+.page-our-story .story-promise {
+  padding-block: var(--section-space);
+}
+
+.page-our-story .story-promise h2 {
+  margin-bottom: 22px;
+}
+
+/* =========================================================
+   Final call to action
+   ========================================================= */
+
+.page-our-story .story-cta {
+  padding-block: clamp(64px, 5.5vw, 84px);
+}
+
+.page-our-story .story-cta__inner {
+  gap: clamp(42px, 6vw, 82px);
+}
+
+/* =========================================================
+   Large tablet
+   ========================================================= */
+
+@media (max-width: 1120px) {
+  .page-our-story {
+    --section-space: 82px;
+  }
+
+  .page-our-story .story-value-card {
+    min-height: 290px;
+  }
+}
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .page-our-story {
+    --section-space: 70px;
+  }
+
+  .page-our-story .story-intro__grid,
+  .page-our-story .story-history__header,
+  .page-our-story .story-gallery__header {
+    gap: 28px;
+  }
+
+  .page-our-story .story-intro__copy {
+    padding-top: 0;
+  }
+
+  .page-our-story .story-history__layout,
+  .page-our-story .story-care__grid,
+  .page-our-story .story-today__grid {
+    gap: 54px;
+  }
+
+  .page-our-story .story-history__header,
+  .page-our-story .story-gallery__header,
+  .page-our-story .story-values__header {
+    margin-bottom: 46px;
+  }
+
+  .page-our-story .story-cta__inner {
+    gap: 34px;
+  }
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 680px) {
+  .page-our-story {
+    --section-space: 56px;
+  }
+
+  .page-our-story main > .section .eyebrow,
+  .page-our-story .story-care .eyebrow,
+  .page-our-story .story-promise .eyebrow,
+  .page-our-story .story-cta .eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .page-our-story .story-history__layout,
+  .page-our-story .story-care__grid,
+  .page-our-story .story-today__grid {
+    gap: 42px;
+  }
+
+  .page-our-story .story-history__header,
+  .page-our-story .story-gallery__header,
+  .page-our-story .story-values__header {
+    margin-bottom: 36px;
+  }
+
+  .page-our-story .story-value-card {
+    min-height: 0;
+    padding: 30px 24px;
+  }
+
+  .page-our-story .story-value-card__icon {
+    margin-bottom: 28px;
+  }
+
+  .page-our-story .story-care__steps article {
+    padding-block: 21px;
+  }
+
+  .page-our-story .story-cta {
+    padding-block: 54px;
+  }
+}
