@@ -1,0 +1,425 @@
+/* =========================================================
+   DENTIST PROFILES
+   Clean editorial layout
+   ========================================================= */
+
+.page-dentists .dentist-profiles {
+  position: relative;
+  overflow: hidden;
+  background: var(--ivory);
+  border-top: 1px solid var(--border);
+}
+
+/* Remove the oversized decorative circle */
+.page-dentists .dentist-profiles::before {
+  display: none;
+}
+
+/* =========================================================
+   Section header
+   ========================================================= */
+
+.page-dentists .dentist-profiles__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  align-items: end;
+  column-gap: clamp(48px, 8vw, 120px);
+  row-gap: 22px;
+  max-width: none;
+  margin-bottom: clamp(58px, 7vw, 90px);
+}
+
+.page-dentists .dentist-profiles__header .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.page-dentists .dentist-profiles__header h2 {
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+.page-dentists .dentist-profiles__header > p:last-child {
+  max-width: 480px;
+  margin: 0;
+  padding-bottom: 7px;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   Individual profile
+   ========================================================= */
+
+.page-dentists .dentist-profile {
+  position: relative;
+  display: grid;
+  grid-template-columns:
+    minmax(340px, 0.88fr)
+    minmax(0, 1.12fr);
+  align-items: start;
+  gap: clamp(54px, 8vw, 118px);
+  padding: clamp(64px, 7vw, 94px) 0;
+  border-top: 1px solid var(--border);
+}
+
+.page-dentists .dentist-profile:last-child {
+  padding-bottom: 0;
+}
+
+.page-dentists .dentist-profile--reverse {
+  grid-template-columns:
+    minmax(0, 1.12fr)
+    minmax(340px, 0.88fr);
+}
+
+.page-dentists .dentist-profile--reverse .dentist-profile__media {
+  order: 2;
+}
+
+.page-dentists .dentist-profile--reverse .dentist-profile__content {
+  order: 1;
+}
+
+/* =========================================================
+   Profile image
+   ========================================================= */
+
+.page-dentists .dentist-profile__media {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+}
+
+/* Remove the decorative aqua block */
+.page-dentists .dentist-profile__media::before {
+  display: none;
+}
+
+.page-dentists .dentist-profile__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: 0 18px 45px rgba(34, 55, 58, 0.09);
+}
+
+/* Remove the dark image gradient */
+.page-dentists .dentist-profile__media::after {
+  display: none;
+}
+
+/* Caption now sits naturally below the photograph */
+.page-dentists .dentist-profile__media figcaption {
+  position: static;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 2px;
+}
+
+.page-dentists .dentist-profile__media figcaption span {
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-dentists .dentist-profile__media figcaption strong {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Small, understated profile number */
+.page-dentists .dentist-profile__index {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  left: 16px;
+  display: grid;
+  width: 48px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 2px;
+  color: var(--white);
+  background: rgba(38, 73, 78, 0.82);
+  box-shadow: none;
+  backdrop-filter: blur(7px);
+  font-family: var(--font-heading);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.page-dentists .dentist-profile--reverse .dentist-profile__index {
+  right: 16px;
+  left: auto;
+}
+
+/* =========================================================
+   Profile content
+   ========================================================= */
+
+.page-dentists .dentist-profile__content {
+  width: 100%;
+  max-width: 680px;
+  padding-top: clamp(6px, 1.5vw, 20px);
+}
+
+.page-dentists .dentist-profile__role {
+  margin: 0 0 16px;
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.page-dentists .dentist-profile__content h3 {
+  max-width: 620px;
+  margin: 0 0 14px;
+  font-size: clamp(2.45rem, 4.1vw, 4.65rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.page-dentists .dentist-profile__qualification {
+  margin: 0 0 clamp(30px, 4vw, 42px);
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.79rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.page-dentists .dentist-profile__lead {
+  max-width: 620px;
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.35vw, 1.22rem);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.page-dentists
+  .dentist-profile__content
+  > p:not(
+    .dentist-profile__role,
+    .dentist-profile__qualification,
+    .dentist-profile__lead
+  ) {
+  max-width: 620px;
+  margin-top: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.78;
+}
+
+/* =========================================================
+   Professional facts
+   ========================================================= */
+
+.page-dentists .dentist-profile__facts {
+  display: grid;
+  gap: 0;
+  max-width: 620px;
+  margin: clamp(32px, 4vw, 44px) 0 34px;
+  padding: 0;
+  border-top: 1px solid var(--border);
+}
+
+.page-dentists .dentist-profile__facts div {
+  display: grid;
+  grid-template-columns: minmax(145px, 0.42fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-dentists .dentist-profile__facts dt {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 0.69rem;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.025em;
+}
+
+.page-dentists .dentist-profile__facts dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.58;
+}
+
+.page-dentists .dentist-profile__content .button {
+  margin-top: 0;
+}
+
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 1020px) {
+  .page-dentists .dentist-profiles__header {
+    column-gap: 50px;
+  }
+
+  .page-dentists .dentist-profile,
+  .page-dentists .dentist-profile--reverse {
+    grid-template-columns:
+      minmax(300px, 0.82fr)
+      minmax(0, 1.18fr);
+    gap: 52px;
+  }
+
+  .page-dentists .dentist-profile--reverse .dentist-profile__media {
+    order: 1;
+  }
+
+  .page-dentists .dentist-profile--reverse .dentist-profile__content {
+    order: 2;
+  }
+
+  .page-dentists .dentist-profile--reverse .dentist-profile__index {
+    right: auto;
+    left: 16px;
+  }
+}
+
+/* =========================================================
+   Mobile and smaller tablets
+   ========================================================= */
+
+@media (max-width: 820px) {
+  .page-dentists .dentist-profiles__header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 52px;
+  }
+
+  .page-dentists .dentist-profiles__header .eyebrow {
+    grid-column: auto;
+  }
+
+  .page-dentists .dentist-profiles__header > p:last-child {
+    max-width: 620px;
+    padding-bottom: 0;
+  }
+
+  .page-dentists .dentist-profile,
+  .page-dentists .dentist-profile--reverse {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 62px 0;
+  }
+
+  .page-dentists .dentist-profile__media,
+  .page-dentists .dentist-profile--reverse .dentist-profile__media {
+    order: 1;
+    width: min(100%, 580px);
+  }
+
+  .page-dentists .dentist-profile__content,
+  .page-dentists .dentist-profile--reverse .dentist-profile__content {
+    order: 2;
+    max-width: 720px;
+    padding-top: 0;
+  }
+
+  .page-dentists .dentist-profile__content h3 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+}
+
+/* =========================================================
+   Small mobile
+   ========================================================= */
+
+@media (max-width: 580px) {
+  .page-dentists .dentist-profiles__header {
+    margin-bottom: 40px;
+  }
+
+  .page-dentists .dentist-profile,
+  .page-dentists .dentist-profile--reverse {
+    gap: 32px;
+    padding: 48px 0;
+  }
+
+  .page-dentists .dentist-profile__media img {
+    aspect-ratio: 4 / 5;
+    border-radius: 2px;
+  }
+
+  .page-dentists .dentist-profile__media figcaption {
+    display: grid;
+    justify-content: start;
+    gap: 4px;
+  }
+
+  .page-dentists .dentist-profile__media figcaption strong {
+    text-align: left;
+  }
+
+  .page-dentists .dentist-profile__index,
+  .page-dentists .dentist-profile--reverse .dentist-profile__index {
+    top: 12px;
+    right: auto;
+    left: 12px;
+    width: 44px;
+    height: 35px;
+  }
+
+  .page-dentists .dentist-profile__content h3 {
+    margin-bottom: 12px;
+    font-size: clamp(2.3rem, 12vw, 3.35rem);
+    line-height: 1;
+  }
+
+  .page-dentists .dentist-profile__qualification {
+    margin-bottom: 26px;
+  }
+
+  .page-dentists .dentist-profile__facts {
+    margin-top: 30px;
+  }
+
+  .page-dentists .dentist-profile__facts div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 15px 0;
+  }
+}
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .page-dentists .dentist-profile *,
+  .page-dentists .dentist-profile *::before,
+  .page-dentists .dentist-profile *::after {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}

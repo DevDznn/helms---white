@@ -1,0 +1,371 @@
+/* =========================================================
+   Services: Treatments
+   Simple editorial layout
+   ========================================================= */
+
+.services-treatments {
+  position: relative;
+  background: var(--ivory);
+}
+
+/* Remove decorative circles from this section. */
+
+.services-treatments::before,
+.services-treatments::after {
+  display: none;
+}
+
+/* =========================================================
+   Section header
+   ========================================================= */
+
+.services-treatments__header {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(300px, 0.55fr);
+  align-items: end;
+  gap: clamp(42px, 7vw, 100px);
+  margin-bottom: clamp(44px, 5vw, 64px);
+}
+
+.services-treatments__header h2 {
+  max-width: 720px;
+  margin: 0;
+}
+
+.services-treatments__header > p {
+  max-width: 520px;
+  margin: 0;
+  padding-bottom: 7px;
+}
+
+/* =========================================================
+   Treatment list
+   ========================================================= */
+
+.services-treatments__list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* =========================================================
+   Individual treatment
+
+   No card background.
+   No box shadow.
+   No outer border radius.
+   No separate container appearance.
+   ========================================================= */
+
+.services-treatment {
+  position: relative;
+  padding: clamp(54px, 6vw, 82px) 0;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+/* Remove the previous card decorations. */
+
+.services-treatment::before,
+.services-treatment::after {
+  display: none;
+}
+
+/* =========================================================
+   Treatment introduction
+   ========================================================= */
+
+.services-treatment__intro {
+  display: grid;
+  grid-template-columns:
+    minmax(320px, 0.8fr)
+    minmax(0, 1.15fr);
+  align-items: start;
+  gap: clamp(44px, 6vw, 88px);
+}
+
+.services-treatment__heading {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.services-treatment__number {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid rgba(22, 121, 133, 0.2);
+  border-radius: 50%;
+  color: var(--brand-deep);
+  background: transparent;
+  font-family: var(--font-heading);
+  font-size: 0.63rem;
+  font-weight: 800;
+}
+
+.services-treatment__category {
+  margin: 2px 0 9px;
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.services-treatment h3 {
+  max-width: 570px;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 2.7vw, 2.65rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+/* =========================================================
+   Treatment details
+   ========================================================= */
+
+.services-treatment__details {
+  max-width: 690px;
+}
+
+.services-treatment__lead {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.65;
+}
+
+.services-treatment__features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 22px 0 0;
+  padding: 0;
+  column-gap: 28px;
+  list-style: none;
+}
+
+.services-treatment__features li {
+  position: relative;
+  padding: 11px 0 11px 27px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.services-treatment__features li::before {
+  position: absolute;
+  top: 15px;
+  left: 1px;
+  width: 13px;
+  height: 7px;
+  border-bottom: 2px solid var(--brand-deep);
+  border-left: 2px solid var(--brand-deep);
+  content: "";
+  transform: rotate(-45deg);
+}
+
+.services-treatment .text-link {
+  margin-top: 22px;
+}
+
+/* =========================================================
+   Four-photo gallery
+
+   Desktop:
+   [ image 1 ][ image 2 ][ image 3 ][ image 4 ]
+
+   No gaps.
+   No border radius.
+   No background card.
+   ========================================================= */
+
+.services-treatment__gallery {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: clamp(30px, 3.5vw, 44px);
+  padding: 0;
+  border: 0;
+}
+
+.services-treatment__gallery-item {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: 0;
+  background: var(--aqua);
+}
+
+/* Remove every old rounded-corner override. */
+
+.services-treatment__gallery-item:first-child,
+.services-treatment__gallery-item:nth-child(3),
+.services-treatment__gallery-item:last-child {
+  border-radius: 0;
+}
+
+/* Remove the dark image overlay. */
+
+.services-treatment__gallery-item::after {
+  display: none;
+}
+
+.services-treatment__gallery .services-treatment__gallery-item img {
+  position: static;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+  box-shadow: none;
+}
+
+/* =========================================================
+   Medium screens
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .services-treatment__intro {
+    grid-template-columns:
+      minmax(270px, 0.75fr)
+      minmax(0, 1fr);
+    gap: 42px;
+  }
+
+  .services-treatment__features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .services-treatments__header {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .services-treatments__header > p {
+    max-width: 680px;
+    padding-bottom: 0;
+  }
+
+  .services-treatment {
+    padding-block: 58px;
+  }
+
+  .services-treatment__intro {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .services-treatment__details {
+    max-width: 760px;
+  }
+
+  .services-treatment__features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /*
+    Two photos per row on tablet.
+    The images still touch with no gap.
+  */
+
+  .services-treatment__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .services-treatment__gallery-item {
+    border-radius: 0;
+  }
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 680px) {
+  .services-treatments__header {
+    margin-bottom: 32px;
+  }
+
+  .services-treatment {
+    padding-block: 46px;
+  }
+
+  .services-treatment__heading {
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .services-treatment__number {
+    width: 46px;
+    height: 46px;
+  }
+
+  .services-treatment h3 {
+    font-size: clamp(1.6rem, 8vw, 2.25rem);
+  }
+
+  .services-treatment__features {
+    grid-template-columns: 1fr;
+    margin-top: 18px;
+  }
+
+  /*
+    Keep two images per row on phones.
+    No spacing and no rounded corners.
+  */
+
+  .services-treatment__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 28px;
+  }
+
+  .services-treatment__gallery-item {
+    aspect-ratio: 4 / 3;
+    border-radius: 0;
+  }
+}
+
+/* =========================================================
+   Very small screens
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .services-treatment__heading {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .services-treatment__number {
+    width: 42px;
+    height: 42px;
+  }
+
+  .services-treatment__gallery-item {
+    aspect-ratio: 1 / 1;
+  }
+}

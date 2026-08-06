@@ -1,0 +1,39 @@
+.page-dentists {
+  --section-space: clamp(76px, 6.5vw, 104px);
+
+  overflow-x: hidden;
+}
+
+.page-dentists .site-nav a[aria-current="page"] {
+  color: var(--brand-deep);
+}
+
+.page-dentists .site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.page-dentists main section[id] {
+  scroll-margin-top: calc(var(--header-height) + 22px);
+}
+
+.page-dentists main > .section .eyebrow,
+.page-dentists .dentists-cta .eyebrow {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .page-dentists {
+    --section-space: 70px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page-dentists {
+    --section-space: 56px;
+  }
+
+  .page-dentists main > .section .eyebrow,
+  .page-dentists .dentists-cta .eyebrow {
+    margin-bottom: 16px;
+  }
+}
