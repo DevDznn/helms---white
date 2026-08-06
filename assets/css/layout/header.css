@@ -1,0 +1,221 @@
+:root {
+  --header-height: 76px;
+}
+
+.site-header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.72));
+  box-shadow: none;
+  backdrop-filter: blur(18px);
+  transition: background var(--ease), border-color var(--ease), box-shadow var(--ease);
+}
+
+.site-header.is-scrolled {
+  border-color: rgba(216, 230, 232, 0.92);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 12px 34px rgba(21, 52, 59, 0.09);
+}
+
+.site-header__inner {
+  display: grid;
+  grid-template-columns: 170px 1fr auto;
+  min-height: var(--header-height);
+  align-items: center;
+  gap: clamp(24px, 4vw, 58px);
+}
+
+.site-header__brand {
+  display: inline-flex;
+  width: 154px;
+  height: 48px;
+  align-items: center;
+}
+
+.site-header__brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 2.6vw, 42px);
+}
+
+.site-nav a {
+  position: relative;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.site-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--ease);
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.site-header__phone {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.site-header__cta {
+  min-height: 44px;
+  padding-inline: 20px;
+  border-radius: 999px;
+}
+
+.site-header__menu-toggle {
+  display: none;
+  padding: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.site-header__menu-toggle span:not(.sr-only) {
+  display: block;
+  width: 23px;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--ink);
+  transition: transform var(--ease), opacity var(--ease);
+}
+
+@media (max-width: 1120px) {
+  .site-header__inner {
+    grid-template-columns: 155px 1fr auto;
+    gap: 24px;
+  }
+
+  .site-header__brand {
+    width: 145px;
+  }
+
+  .site-nav {
+    gap: 19px;
+  }
+
+  .site-header__phone {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .site-header__inner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .site-header__brand {
+    width: 142px;
+    height: 44px;
+  }
+
+  .site-header__actions {
+    display: none;
+  }
+
+  .site-header__menu-toggle {
+    z-index: 1002;
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .site-header__menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .site-header__menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    opacity: 0;
+  }
+
+  .site-header__menu-toggle[aria-expanded="true"] span:nth-child(4) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .site-nav {
+    position: fixed;
+    z-index: 1001;
+    inset: var(--header-height) 0 auto;
+    display: grid;
+    justify-content: stretch;
+    gap: 0;
+    padding: 18px 24px 28px;
+    border-top: 1px solid var(--border);
+    background: var(--white);
+    box-shadow: 0 24px 45px rgba(21, 52, 59, 0.12);
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-18px);
+    transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
+  }
+
+  .site-nav.is-open {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .site-nav a {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.92rem;
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --header-height: 62px;
+  }
+
+  .site-header {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .site-header__brand {
+    width: 134px;
+    height: 42px;
+  }
+}

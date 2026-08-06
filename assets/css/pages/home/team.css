@@ -1,0 +1,325 @@
+.team {
+  padding-block: clamp(64px, 7vw, 96px);
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.team__heading {
+  display: block;
+  width: 100%;
+  margin-bottom: clamp(42px, 5vw, 62px);
+}
+
+.team__heading > div:first-child {
+  width: 100%;
+}
+
+.team__heading h2 {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(2.7rem, 4.4vw, 4.8rem);
+  line-height: 1.06;
+  letter-spacing: -0.05em;
+
+  /* Use the available width and wrap only when necessary */
+  white-space: normal;
+  text-wrap: wrap;
+  overflow-wrap: normal;
+}
+
+.team__intro {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 24px;
+  padding-bottom: 0;
+}
+
+.team__intro > p {
+  color: var(--text);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .team__heading h2 {
+    font-size: clamp(2.45rem, 6.5vw, 3.8rem);
+  }
+
+  .team__intro {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  .team__heading {
+    margin-bottom: 36px;
+  }
+
+  .team__heading h2 {
+    font-size: clamp(2.25rem, 10vw, 3.3rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  .team__intro {
+    margin-top: 18px;
+  }
+}
+
+.team__intro > p {
+  color: var(--text);
+  font-size: clamp(1rem, 1.3vw, 1.13rem);
+  line-height: 1.65;
+}
+
+/* =========================================================
+   Dentist cards
+   ========================================================= */
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.team-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--white);
+  transition:
+    border-color var(--ease),
+    box-shadow var(--ease),
+    transform var(--ease);
+}
+
+.team-card:hover {
+  border-color: rgba(0, 107, 120, 0.25);
+  box-shadow: 0 18px 42px rgba(21, 52, 59, 0.1);
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   Portrait area
+   ========================================================= */
+
+.team-card__image {
+  position: relative;
+  aspect-ratio: 4 / 4.65;
+  overflow: hidden;
+  background: var(--aqua);
+}
+
+.team-card__image img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 650ms ease;
+}
+
+.team-card:hover .team-card__image img {
+  transform: scale(1.03);
+}
+
+.team-card__image-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(21, 52, 59, 0.02) 45%,
+    rgba(21, 52, 59, 0.18) 100%
+  );
+}
+
+.dentist-card__placeholder,
+.team-card__role {
+  position: absolute;
+  z-index: 2;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(9px);
+}
+
+.team-card__role {
+  right: 16px;
+  bottom: 16px;
+  color: var(--white);
+  background: rgba(0, 107, 120, 0.82);
+}
+
+/* =========================================================
+   Card body
+   ========================================================= */
+
+.team-card__body {
+  display: flex;
+  min-height: 335px;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.team-card__heading {
+  position: relative;
+  margin-bottom: 13px;
+  padding-top: 12px;
+}
+
+.team-card__heading::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  content: "";
+  background: var(--brand);
+}
+
+.team-card__number {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.team-card h3 {
+  margin-bottom: 0;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  line-height: 1.2;
+}
+
+.team-card__qualification {
+  min-height: 36px;
+  margin-bottom: 15px;
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.63rem;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.team-card__description {
+  margin-bottom: 0;
+  color: var(--text);
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
+.team-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+.team-card__link span {
+  transition: transform var(--ease);
+}
+
+.team-card__link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   Contact strip
+   ========================================================= */
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .team__heading {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .team__intro {
+    max-width: 680px;
+  }
+
+  .team__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-card:last-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .team-card:last-child .team-card__image {
+    height: 100%;
+    min-height: 430px;
+    aspect-ratio: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .team {
+    padding-block: 60px;
+  }
+
+  .team__heading {
+    margin-bottom: 36px;
+  }
+
+  .team__heading h2 {
+    font-size: clamp(2.25rem, 10vw, 3.3rem);
+  }
+
+  .team__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .team-card:last-child {
+    display: flex;
+    grid-column: auto;
+  }
+
+  .team-card:last-child .team-card__image {
+    min-height: 0;
+    aspect-ratio: 4 / 4.65;
+  }
+
+  .team-card__body {
+    min-height: auto;
+    padding: 21px;
+  }
+
+  .team-card__qualification {
+    min-height: 0;
+  }
+
+  .dentists__footer .button {
+    width: 100%;
+  }
+}
