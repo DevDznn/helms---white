@@ -1,0 +1,371 @@
+/* =========================================================
+   Payments: Methods
+   Compact logo-based layout
+   ========================================================= */
+
+.payments-methods {
+  position: relative;
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.payments-methods::before {
+  position: absolute;
+  right: -190px;
+  bottom: -230px;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(22, 121, 133, 0.09);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+/* =========================================================
+   Section header
+   ========================================================= */
+
+.payments-methods__header {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(300px, 0.58fr);
+  align-items: end;
+  gap: clamp(44px, 7vw, 104px);
+  margin-bottom: clamp(42px, 5vw, 62px);
+}
+
+.payments-methods__header h2 {
+  max-width: 760px;
+  margin: 0;
+}
+
+.payments-methods__header > p {
+  max-width: 520px;
+  margin: 0;
+  padding-bottom: 7px;
+}
+
+/* =========================================================
+   Five-method grid
+   ========================================================= */
+
+.payments-methods__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* =========================================================
+   Method
+   ========================================================= */
+
+.payment-method {
+  min-width: 0;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  transition:
+    background-color var(--ease),
+    transform var(--ease);
+}
+
+.payment-method:last-child {
+  border-right: 0;
+}
+
+.payment-method:hover {
+  z-index: 1;
+  background: var(--white);
+  transform: translateY(-5px);
+}
+
+/* =========================================================
+   Compact logo area
+   ========================================================= */
+
+.payment-method__logo {
+  display: grid;
+  height: 112px;
+  place-items: center;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.payment-method__logo img {
+  display: block;
+  width: auto;
+  max-width: 130px;
+  height: auto;
+  max-height: 54px;
+  object-fit: contain;
+}
+
+/*
+  This keeps logos with very wide or very tall proportions
+  visually balanced inside the same area.
+*/
+
+.payment-method:nth-child(1) .payment-method__logo img {
+  max-width: 118px;
+}
+
+.payment-method:nth-child(2) .payment-method__logo img {
+  max-width: 125px;
+}
+
+.payment-method:nth-child(4) .payment-method__logo img {
+  max-width: 140px;
+}
+
+/* =========================================================
+   Method content
+   ========================================================= */
+
+.payment-method__content {
+  display: flex;
+  min-height: 305px;
+  flex-direction: column;
+  padding: 25px 22px 27px;
+}
+
+.payment-method__top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 19px;
+}
+
+.payment-method__top > span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(22, 121, 133, 0.18);
+  border-radius: 50%;
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.56rem;
+  font-weight: 800;
+}
+
+.payment-method__top p {
+  margin: 0;
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.payment-method h3 {
+  margin: 0 0 13px;
+  color: var(--ink);
+  font-size: clamp(1.17rem, 1.45vw, 1.42rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.payment-method__content > p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.84rem;
+  line-height: 1.62;
+}
+
+/* =========================================================
+   Small detail row
+   ========================================================= */
+
+.payment-method__details {
+  display: grid;
+  margin: auto 0 0;
+  padding-top: 22px;
+}
+
+.payment-method__details div {
+  display: grid;
+  gap: 5px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.payment-method__details dt {
+  color: var(--brand-deep);
+  font-family: var(--font-heading);
+  font-size: 0.54rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.payment-method__details dd {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   Disclaimer
+   ========================================================= */
+
+.payments-methods__disclaimer {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 28px 0 0;
+  padding-left: 17px;
+  border-left: 2px solid var(--brand);
+  color: var(--text);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   Smaller desktop
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  .payments-methods__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .payment-method:nth-child(3) {
+    border-right: 0;
+  }
+
+  .payment-method:nth-child(-n + 3) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .payment-method__content {
+    min-height: 280px;
+  }
+}
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .payments-methods__header {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .payments-methods__header > p {
+    max-width: 680px;
+    padding-bottom: 0;
+  }
+
+  .payments-methods__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .payment-method,
+  .payment-method:nth-child(3) {
+    border-right: 1px solid var(--border);
+  }
+
+  .payment-method:nth-child(even) {
+    border-right: 0;
+  }
+
+  .payment-method:nth-child(-n + 4) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .payment-method:last-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(180px, 0.38fr) minmax(0, 1fr);
+    border-right: 0;
+  }
+
+  .payment-method:last-child .payment-method__logo {
+    height: 100%;
+    min-height: 210px;
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+  }
+
+  .payment-method:last-child .payment-method__content {
+    min-height: 210px;
+  }
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 620px) {
+  .payments-methods::before {
+    display: none;
+  }
+
+  .payments-methods__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-method,
+  .payment-method:nth-child(3),
+  .payment-method:nth-child(even),
+  .payment-method:last-child {
+    display: block;
+    grid-column: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .payment-method:last-child {
+    border-bottom: 0;
+  }
+
+  .payment-method__logo,
+  .payment-method:last-child .payment-method__logo {
+    height: 100px;
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .payment-method__logo img {
+    max-width: 125px;
+    max-height: 48px;
+  }
+
+  .payment-method__content,
+  .payment-method:last-child .payment-method__content {
+    min-height: 0;
+    padding: 24px 22px 26px;
+  }
+
+  .payment-method__details {
+    margin-top: 21px;
+  }
+}
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .payment-method {
+    transition: none;
+  }
+
+  .payment-method:hover {
+    transform: none;
+  }
+}

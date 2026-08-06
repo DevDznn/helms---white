@@ -91,7 +91,7 @@
           id="site-navigation"
         >
           <a href="our-story.html"> Our story </a>
-          <a href="services.html"> Services </a>
+          <a href="services.html" aria-current="page"> Services </a>
           <a href="dentists.html"> Dentists </a>
           <a href="payments.html"> Payments </a>
           <a href="blog.html"> Blog </a>
@@ -125,6 +125,7 @@
           class="services-hero__shape services-hero__shape--one"
           aria-hidden="true"
         ></div>
+
         <div
           class="services-hero__shape services-hero__shape--two"
           aria-hidden="true"
@@ -154,6 +155,7 @@
               >
                 Explore treatments
               </a>
+
               <a
                 class="button button--secondary button--large"
                 href="tel:+61266219933"
@@ -162,41 +164,35 @@
               </a>
             </div>
 
-            <dl class="services-hero__facts" aria-label="Service highlights">
-              <div>
-                <dt>Preventive</dt>
-                <dd>Routine care and maintenance</dd>
-              </div>
-              <div>
-                <dt>Restorative</dt>
-                <dd>Strength, comfort and function</dd>
-              </div>
-              <div>
-                <dt>Cosmetic</dt>
-                <dd>Natural-looking smile options</dd>
-              </div>
-            </dl>
+            <ul
+              class="services-hero__principles"
+              aria-label="Dental service highlights"
+            >
+              <li>Preventive care</li>
+              <li>Restorative treatment</li>
+              <li>Cosmetic options</li>
+            </ul>
           </div>
 
           <figure class="services-hero__media">
             <img
               src="../assets/images/services/services-hero.png"
               alt="Dentist discussing treatment options with a patient inside the Helms and White Dental practice"
-              width="1300"
+              width="1400"
               height="1500"
             />
 
             <figcaption class="services-hero__caption">
               <span>Care designed around you</span>
-              <strong
-                >Clear options, considered planning and time to ask
-                questions.</strong
-              >
+
+              <strong>
+                Clear options, considered planning and time to ask questions.
+              </strong>
             </figcaption>
 
             <div class="services-hero__badge" aria-hidden="true">
-              <span>Complete</span>
-              <strong>Care</strong>
+              <strong>6</strong>
+              <span>Core services</span>
             </div>
           </figure>
         </div>
@@ -311,7 +307,6 @@
           </div>
 
           <div class="services-treatments__list">
-        
             <article class="services-treatment" id="preventive-care">
               <div class="services-treatment__intro">
                 <div class="services-treatment__heading">
@@ -849,7 +844,6 @@
         </div>
       </section>
 
-     
       <section class="services-urgent" aria-labelledby="urgent-title">
         <div class="container services-urgent__grid">
           <figure class="services-urgent__media">
@@ -906,7 +900,6 @@
           </div>
         </div>
       </section>
-
 
       <section class="section services-faq" aria-labelledby="faq-title">
         <div class="container services-faq__grid">

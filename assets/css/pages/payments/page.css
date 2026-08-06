@@ -1,0 +1,52 @@
+.page-payments {
+  --payments-section-space: clamp(76px, 6.4vw, 104px);
+
+  overflow-x: hidden;
+}
+
+.page-payments .site-nav a[aria-current="page"] {
+  color: var(--brand-deep);
+}
+
+.page-payments .site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.page-payments main > .section {
+  padding-block: var(--payments-section-space);
+}
+
+.page-payments main section[id] {
+  scroll-margin-top: calc(var(--header-height) + 22px);
+}
+
+.page-payments main > .section .eyebrow,
+.page-payments .payments-support .eyebrow,
+.page-payments .payments-cta .eyebrow {
+  margin-bottom: 18px;
+}
+
+.page-payments main h1,
+.page-payments main h2,
+.page-payments main h3,
+.page-payments main h4 {
+  text-wrap: balance;
+}
+
+@media (max-width: 900px) {
+  .page-payments {
+    --payments-section-space: 70px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page-payments {
+    --payments-section-space: 56px;
+  }
+
+  .page-payments main > .section .eyebrow,
+  .page-payments .payments-support .eyebrow,
+  .page-payments .payments-cta .eyebrow {
+    margin-bottom: 16px;
+  }
+}

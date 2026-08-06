@@ -1,201 +1,220 @@
 /* =========================================================
-   Our Story: Hero
+   Our Story Hero
+   Matches Payments and Services hero design
    ========================================================= */
 
-.story-hero {
+.page-our-story .story-hero {
   position: relative;
-  min-height: 760px;
-  padding: calc(var(--header-height) + 34px) 0 clamp(64px, 6vw, 92px);
+  min-height: 780px;
+  padding: calc(var(--header-height) + 38px) 0 clamp(64px, 6vw, 96px);
   overflow: hidden;
   background:
+    radial-gradient(circle at 92% 8%, rgba(1, 181, 204, 0.13), transparent 25%),
     linear-gradient(
-      115deg,
-      rgba(237, 249, 250, 0.96),
-      rgba(251, 248, 244, 0.82)
-    ),
-    var(--aqua);
+      118deg,
+      rgba(251, 248, 244, 0.98),
+      rgba(237, 249, 250, 0.94)
+    );
 }
 
-.story-hero::before {
+/* Large decorative circle */
+
+.page-our-story .story-hero::before {
   position: absolute;
-  right: -12%;
-  bottom: -38%;
+  right: -210px;
+  bottom: -330px;
   width: 660px;
   height: 660px;
-  border: 1px solid rgba(22, 121, 133, 0.12);
+  border: 1px solid rgba(22, 121, 133, 0.11);
   border-radius: 50%;
   content: "";
+  pointer-events: none;
 }
 
-.story-hero::after {
+/* Left decorative ring */
+
+.page-our-story .story-hero::after {
   position: absolute;
-  top: 19%;
-  left: -160px;
-  width: 320px;
-  height: 320px;
-  border: 70px solid rgba(1, 181, 204, 0.055);
+  top: 18%;
+  left: -150px;
+  width: 300px;
+  height: 300px;
+  border: 68px solid rgba(1, 181, 204, 0.045);
   border-radius: 50%;
   content: "";
+  pointer-events: none;
 }
 
-.story-hero__graphic {
+/* =========================================================
+   Decorative shapes
+   ========================================================= */
+
+.page-our-story .story-hero__graphic {
   position: absolute;
   z-index: 0;
   border-radius: 50%;
   pointer-events: none;
 }
 
-.story-hero__graphic--one {
-  top: 15%;
-  right: 7%;
-  width: 160px;
-  height: 160px;
-  border: 1px solid rgba(22, 121, 133, 0.16);
+.page-our-story .story-hero__graphic--one {
+  top: 16%;
+  right: 8%;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(22, 121, 133, 0.15);
 }
 
-.story-hero__graphic--two {
-  right: 41%;
-  bottom: 9%;
-  width: 56px;
-  height: 56px;
-  background: rgba(1, 181, 204, 0.13);
+.page-our-story .story-hero__graphic--two {
+  right: 43%;
+  bottom: 11%;
+  width: 52px;
+  height: 52px;
+  background: rgba(1, 181, 204, 0.12);
 }
 
 /* =========================================================
    Hero layout
    ========================================================= */
 
-.story-hero__grid {
+.page-our-story .story-hero__grid {
   position: relative;
   z-index: 1;
   display: grid;
   grid-template-columns:
-    minmax(0, 1.02fr)
-    minmax(420px, 0.9fr);
+    minmax(0, 0.96fr)
+    minmax(430px, 0.88fr);
   align-items: start;
-  gap: clamp(52px, 6vw, 92px);
+  gap: clamp(56px, 7vw, 102px);
 }
 
-.story-hero__content {
+.page-our-story .story-hero__content {
   max-width: 690px;
-  padding-top: clamp(4px, 1vw, 14px);
+  padding-top: clamp(6px, 1vw, 16px);
 }
 
-.story-hero .eyebrow {
-  margin-bottom: 23px;
-}
-
-.story-hero h1 {
-  max-width: 760px;
-  margin: 0 0 23px;
-  font-size: clamp(3.5rem, 5.65vw, 6.2rem);
-  font-weight: 600;
-  line-height: 0.98;
-  letter-spacing: -0.057em;
-  text-wrap: balance;
-}
-
-.story-hero__lead {
-  max-width: 620px;
-  margin: 0;
-  color: var(--text);
-  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
-  line-height: 1.55;
-}
-
-.story-hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 11px;
-  margin-top: 30px;
+.page-our-story .story-hero .eyebrow {
+  margin-bottom: 22px;
 }
 
 /* =========================================================
-   Practice facts
+   Typography
    ========================================================= */
 
-.story-hero__facts {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0;
-  margin: 36px 0 0;
-  padding: 20px 0 0;
-  border-top: 1px solid rgba(22, 121, 133, 0.18);
-}
-
-.story-hero__facts div {
-  padding: 0 18px;
-  border-right: 1px solid rgba(22, 121, 133, 0.15);
-}
-
-.story-hero__facts div:first-child {
-  padding-left: 0;
-}
-
-.story-hero__facts div:last-child {
-  padding-right: 0;
-  border-right: 0;
-}
-
-.story-hero__facts dt {
-  margin-bottom: 5px;
+.page-our-story .story-hero h1 {
+  max-width: 770px;
+  margin: 0 0 25px;
   color: var(--ink);
-  font-family: var(--font-heading);
-  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  font-size: clamp(3.55rem, 5.7vw, 6.2rem);
+  font-weight: 600;
+  line-height: 0.99;
+  letter-spacing: -0.058em;
+  text-wrap: balance;
 }
 
-.story-hero__facts dd {
+.page-our-story .story-hero__lead {
+  max-width: 625px;
   margin: 0;
   color: var(--text);
-  font-size: 0.76rem;
-  line-height: 1.4;
+  font-size: clamp(1.06rem, 1.5vw, 1.27rem);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   Hero actions
+   ========================================================= */
+
+.page-our-story .story-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* =========================================================
+   Story principles
+   ========================================================= */
+
+.page-our-story .story-hero__principles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 38px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid rgba(22, 121, 133, 0.17);
+  list-style: none;
+}
+
+.page-our-story .story-hero__principles li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.page-our-story .story-hero__principles li::before {
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  content: "";
+  background: var(--brand);
+  transform: translateY(-50%);
 }
 
 /* =========================================================
    Hero image
    ========================================================= */
 
-.story-hero__media {
+.page-our-story .story-hero__media {
   position: relative;
   min-height: 620px;
   margin: 0;
 }
 
-.story-hero__media::before {
+.page-our-story .story-hero__media::before {
   position: absolute;
   z-index: -1;
-  top: -22px;
-  right: -26px;
-  width: 70%;
-  height: 52%;
-  border-radius: 36px;
+  top: -24px;
+  right: -28px;
+  width: 72%;
+  height: 54%;
+  border-radius: 42px;
   content: "";
-  background: rgba(1, 181, 204, 0.12);
+  background: var(--aqua-strong);
 }
 
-.story-hero__media::after {
+.page-our-story .story-hero__media::after {
   position: absolute;
   z-index: -1;
   bottom: -22px;
   left: -22px;
-  width: 52%;
-  height: 36%;
+  width: 48%;
+  height: 33%;
   border: 1px solid rgba(22, 121, 133, 0.18);
-  border-radius: 32px;
+  border-radius: 36px;
   content: "";
 }
 
-.story-hero__media > img {
+.page-our-story .story-hero__media > img {
+  display: block;
   width: 100%;
   height: 620px;
-  border-radius: 34px 34px 96px 34px;
+  border-radius: 36px 36px 104px 36px;
   object-fit: cover;
+  object-position: center;
   box-shadow: var(--shadow-md);
 }
 
-.story-hero__caption {
+/* =========================================================
+   Image caption
+   ========================================================= */
+
+.page-our-story .story-hero__caption {
   position: absolute;
   right: 22px;
   bottom: 22px;
@@ -203,89 +222,98 @@
   display: grid;
   gap: 4px;
   padding: 18px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 16px;
-  background: rgba(25, 66, 73, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 17px;
+  background: rgba(49, 84, 90, 0.78);
   backdrop-filter: blur(12px);
 }
 
-.story-hero__caption span {
+.page-our-story .story-hero__caption span {
   color: var(--brand);
   font-family: var(--font-heading);
-  font-size: 0.62rem;
+  font-size: 0.61rem;
   font-weight: 800;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
-.story-hero__caption strong {
+.page-our-story .story-hero__caption strong {
+  max-width: 440px;
   color: var(--white);
   font-family: var(--font-heading);
   font-size: 0.88rem;
-  line-height: 1.4;
+  font-weight: 700;
+  line-height: 1.45;
 }
 
-.story-hero__year {
+/* =========================================================
+   Year badge
+   ========================================================= */
+
+.page-our-story .story-hero__year {
   position: absolute;
-  top: 32px;
-  left: -38px;
+  top: 38px;
+  left: -46px;
   display: grid;
-  width: 118px;
-  height: 118px;
+  width: 120px;
+  height: 120px;
   place-content: center;
   border: 7px solid var(--white);
   border-radius: 50%;
   color: var(--white);
   background: var(--brand-deep);
-  box-shadow: 0 18px 44px rgba(22, 121, 133, 0.24);
+  box-shadow: 0 18px 44px rgba(22, 121, 133, 0.23);
   text-align: center;
 }
 
-.story-hero__year span {
+.page-our-story .story-hero__year strong {
   font-family: var(--font-heading);
-  font-size: 0.57rem;
+  font-size: 1.65rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.page-our-story .story-hero__year span {
+  max-width: 76px;
+  margin-top: 5px;
+  font-family: var(--font-heading);
+  font-size: 0.5rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  line-height: 1.25;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
-.story-hero__year strong {
-  font-family: var(--font-heading);
-  font-size: 1.38rem;
-  line-height: 1.15;
-  letter-spacing: -0.05em;
-}
-
 /* =========================================================
-   Large tablet
+   Smaller desktop
    ========================================================= */
 
 @media (max-width: 1120px) {
-  .story-hero {
-    padding-bottom: 76px;
-  }
-
-  .story-hero__grid {
+  .page-our-story .story-hero__grid {
     grid-template-columns:
       minmax(0, 1fr)
-      minmax(360px, 0.82fr);
+      minmax(370px, 0.8fr);
     gap: 48px;
   }
 
-  .story-hero h1 {
-    font-size: clamp(3.25rem, 5.4vw, 5.4rem);
+  .page-our-story .story-hero h1 {
+    font-size: clamp(3.2rem, 5.4vw, 5.45rem);
   }
 
-  .story-hero__media,
-  .story-hero__media > img {
-    min-height: 550px;
-    height: 550px;
+  .page-our-story .story-hero__media,
+  .page-our-story .story-hero__media > img {
+    min-height: 560px;
+    height: 560px;
   }
 
-  .story-hero__year {
-    left: -24px;
+  .page-our-story .story-hero__year {
+    left: -26px;
     width: 106px;
     height: 106px;
+  }
+
+  .page-our-story .story-hero__year strong {
+    font-size: 1.45rem;
   }
 }
 
@@ -294,33 +322,29 @@
    ========================================================= */
 
 @media (max-width: 900px) {
-  .story-hero {
+  .page-our-story .story-hero {
     min-height: auto;
     padding: calc(var(--header-height) + 32px) 0 72px;
   }
 
-  .story-hero__grid {
+  .page-our-story .story-hero__grid {
     grid-template-columns: 1fr;
-    gap: 52px;
+    gap: 54px;
   }
 
-  .story-hero__content {
+  .page-our-story .story-hero__content {
     max-width: 760px;
     padding-top: 0;
   }
 
-  .story-hero h1 {
-    max-width: 760px;
-  }
-
-  .story-hero__media {
-    width: min(100%, 620px);
-    min-height: 560px;
+  .page-our-story .story-hero__media {
+    width: min(100%, 650px);
+    min-height: 570px;
     margin-inline: auto;
   }
 
-  .story-hero__media > img {
-    height: 560px;
+  .page-our-story .story-hero__media > img {
+    height: 570px;
   }
 }
 
@@ -329,77 +353,68 @@
    ========================================================= */
 
 @media (max-width: 680px) {
-  .story-hero {
+  .page-our-story .story-hero {
     padding: calc(var(--header-height) + 28px) 0 58px;
   }
 
-  .story-hero::before,
-  .story-hero::after,
-  .story-hero__graphic {
+  .page-our-story .story-hero::before,
+  .page-our-story .story-hero::after,
+  .page-our-story .story-hero__graphic {
     display: none;
   }
 
-  .story-hero .eyebrow {
+  .page-our-story .story-hero .eyebrow {
     margin-bottom: 19px;
   }
 
-  .story-hero h1 {
-    margin-bottom: 21px;
-    font-size: clamp(2.75rem, 13vw, 4.15rem);
+  .page-our-story .story-hero h1 {
+    margin-bottom: 22px;
+    font-size: clamp(2.8rem, 13vw, 4.15rem);
   }
 
-  .story-hero__actions {
+  .page-our-story .story-hero__actions {
     display: grid;
-    margin-top: 26px;
+    margin-top: 27px;
   }
 
-  .story-hero__actions .button {
+  .page-our-story .story-hero__actions .button {
     width: 100%;
   }
 
-  .story-hero__facts {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .page-our-story .story-hero__principles {
+    display: grid;
+    gap: 12px;
     margin-top: 30px;
     padding-top: 18px;
   }
 
-  .story-hero__facts div,
-  .story-hero__facts div:first-child,
-  .story-hero__facts div:last-child {
-    padding: 0 0 16px;
-    border-right: 0;
-    border-bottom: 1px solid rgba(22, 121, 133, 0.14);
-  }
-
-  .story-hero__facts div:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
-  }
-
-  .story-hero__media,
-  .story-hero__media > img {
+  .page-our-story .story-hero__media,
+  .page-our-story .story-hero__media > img {
     min-height: 460px;
     height: 460px;
   }
 
-  .story-hero__media > img {
-    border-radius: 26px 26px 68px 26px;
+  .page-our-story .story-hero__media > img {
+    border-radius: 26px 26px 72px 26px;
   }
 
-  .story-hero__year {
+  .page-our-story .story-hero__year {
     top: -34px;
     left: 18px;
-    width: 92px;
-    height: 92px;
+    width: 94px;
+    height: 94px;
     border-width: 6px;
   }
 
-  .story-hero__year strong {
-    font-size: 1.16rem;
+  .page-our-story .story-hero__year strong {
+    font-size: 1.25rem;
   }
 
-  .story-hero__caption {
+  .page-our-story .story-hero__year span {
+    font-size: 0.44rem;
+  }
+
+  .page-our-story .story-hero__caption {
     right: 14px;
     bottom: 14px;
     left: 14px;
@@ -407,10 +422,31 @@
   }
 }
 
+/* =========================================================
+   Small mobile
+   ========================================================= */
+
 @media (max-width: 440px) {
-  .story-hero__media,
-  .story-hero__media > img {
+  .page-our-story .story-hero__media,
+  .page-our-story .story-hero__media > img {
     min-height: 400px;
     height: 400px;
+  }
+
+  .page-our-story .story-hero__caption strong {
+    font-size: 0.82rem;
+  }
+}
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .page-our-story .story-hero *,
+  .page-our-story .story-hero *::before,
+  .page-our-story .story-hero *::after {
+    scroll-behavior: auto;
+    transition: none;
   }
 }
