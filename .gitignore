@@ -1,2 +1,8 @@
-/.vscode
-/README.md
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local tooling
+node_modules/
+*.log
