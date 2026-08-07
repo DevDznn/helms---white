@@ -45,6 +45,7 @@
   </head>
   <body class="page-home">
     <a class="skip-link" href="#main-content"> Skip to main content </a>
+
     <header class="site-header" data-js="site-header">
       <div class="container site-header__inner">
         <a
@@ -95,13 +96,14 @@
           </a>
           <a
             class="button button--primary site-header__cta"
-            href="https://booking.au.hsone.app/soe/new?pid=AULHL01"
+            href="pages/booking.html"
           >
             Book now
           </a>
         </div>
       </div>
     </header>
+
     <main id="main-content">
       <section aria-labelledby="hero-title" class="hero" id="top">
         <div aria-hidden="true" class="hero__media" data-js="hero-media">
@@ -139,7 +141,7 @@
             <div class="hero__actions">
               <a
                 class="button button--primary button--large"
-                href="https://booking.au.hsone.app/soe/new?pid=AULHL01"
+                href="pages/booking.html"
               >
                 Book a visit
               </a>
@@ -165,15 +167,23 @@
                 <span> Care for all ages </span>
               </div>
             </div>
-            <div class="hero__location">
-              <span aria-hidden="true"> ⌖ </span>
+            <a
+              class="hero__location"
+              href="https://www.google.com/maps/search/?api=1&query=24+Conway+Street+Lismore+NSW+2480"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Helms and White Dental location in Google Maps"
+            >
+              <span aria-hidden="true">⌖</span>
+
               <p>
-                <strong> 24 Conway Street, Lismore </strong>
+                <strong>24 Conway Street, Lismore</strong>
+
                 <small>
                   Opposite the Post Office · Monday–Friday, 8:30am–5:00pm
                 </small>
               </p>
-            </div>
+            </a>
           </div>
         </div>
         <a aria-label="Scroll to learn more" class="hero__scroll" href="#about">
@@ -181,6 +191,7 @@
           <i aria-hidden="true"> </i>
         </a>
       </section>
+
       <section aria-label="Practice highlights" class="trust-strip">
         <div class="container trust-strip__grid">
           <article>
@@ -233,6 +244,7 @@
           </article>
         </div>
       </section>
+      
       <section class="section intro" id="about">
         <div class="container intro__top">
           <div class="intro__content">
@@ -307,6 +319,7 @@
           </article>
         </div>
       </section>
+
       <section class="section story" id="our-story">
         <div class="container story__grid">
           <figure
@@ -321,7 +334,7 @@
                 class="story__slide is-active"
                 data-story-slide=""
                 height="1400"
-                src="assets/images/home/story/reception.webp"
+                src="assets/images/home/story/reception.png"
                 width="1200"
               />
               <img
@@ -332,7 +345,7 @@
                 decoding="async"
                 height="1400"
                 loading="lazy"
-                src="assets/images/home/story/consultation.webp"
+                src="assets/images/home/story/consultation.png"
                 width="1200"
               />
               <img
@@ -343,7 +356,7 @@
                 decoding="async"
                 height="1400"
                 loading="lazy"
-                src="assets/images/home/story/treatment-room.webp"
+                src="assets/images/home/story/treatment-room.png"
                 width="1200"
               />
             </div>
@@ -428,6 +441,7 @@
           </div>
         </div>
       </section>
+
       <section class="section services" id="services">
         <div class="container">
           <div class="services__top">
@@ -444,8 +458,8 @@
                 circumstances. Complex cases may be coordinated with trusted
                 specialists.
               </p>
-              <a class="text-link" href="#contact">
-                Ask our team about a service
+              <a class="text-link" href="pages/services.html">
+                See all our services
                 <span aria-hidden="true"> ↗ </span>
               </a>
             </div>
@@ -454,7 +468,7 @@
                 alt="Modern treatment room at Helms and White Dental"
                 decoding="async"
                 height="1000"
-                src="assets/images/home/services/services-overview.webp"
+                src="assets/images/home/services/services-overview.png"
                 width="1500"
               />
               <figcaption>
@@ -463,6 +477,7 @@
               </figcaption>
             </figure>
           </div>
+
           <div class="services-carousel">
             <div class="services-carousel__header">
               <div>
@@ -510,12 +525,12 @@
                     decoding="async"
                     height="1200"
                     loading="lazy"
-                    src="assets/images/home/services/preventive-care.webp"
+                    src="assets/images/home/services/preventive-care.png"
                     width="960"
                   />
                   <a
                     class="service-slide__link"
-                    href="https://booking.au.hsone.app/soe/new?pid=AULHL01"
+                    href="pages/services.html#preventive-care"
                   >
                     <span class="service-slide__index"> 01 </span>
                     <div class="service-slide__content">
@@ -528,7 +543,7 @@
                         support and practical prevention advice.
                       </p>
                       <span class="service-slide__action">
-                        Book a check-up
+                        Explore this service
                         <i aria-hidden="true"> ↗ </i>
                       </span>
                     </div>
@@ -542,10 +557,10 @@
                     decoding="async"
                     height="1200"
                     loading="lazy"
-                    src="assets/images/home/services/restorations.webp"
+                    src="assets/images/home/services/restorations.png"
                     width="960"
                   />
-                  <a class="service-slide__link" href="#contact">
+                  <a class="service-slide__link" href="pages/services.html#restorative-treatment">
                     <span class="service-slide__index"> 02 </span>
                     <div class="service-slide__content">
                       <span class="service-slide__category">
@@ -557,7 +572,7 @@
                         designed to restore strength and function.
                       </p>
                       <span class="service-slide__action">
-                        Enquire about treatment
+                        Explore this service
                         <i aria-hidden="true"> ↗ </i>
                       </span>
                     </div>
@@ -571,10 +586,10 @@
                     decoding="async"
                     height="1200"
                     loading="lazy"
-                    src="assets/images/home/services/crowns-and-inlays.webp"
+                    src="assets/images/home/services/crowns-and-inlays.png"
                     width="960"
                   />
-                  <a class="service-slide__link" href="#contact">
+                  <a class="service-slide__link" href="pages/services.html#crowns-and-inlays">
                     <span class="service-slide__index"> 03 </span>
                     <div class="service-slide__content">
                       <span class="service-slide__category">
@@ -586,7 +601,7 @@
                         implant-supported options where appropriate.
                       </p>
                       <span class="service-slide__action">
-                        Explore your options
+                        Explore this service
                         <i aria-hidden="true"> ↗ </i>
                       </span>
                     </div>
@@ -600,10 +615,10 @@
                     decoding="async"
                     height="1200"
                     loading="lazy"
-                    src="assets/images/home/services/root-canal.webp"
+                    src="assets/images/home/services/root-canal.png"
                     width="960"
                   />
-                  <a class="service-slide__link" href="#contact">
+                  <a class="service-slide__link" href="pages/services.html#root-canal-treatment">
                     <span class="service-slide__index"> 04 </span>
                     <div class="service-slide__content">
                       <span class="service-slide__category">
@@ -615,7 +630,7 @@
                         discomfort and help preserve natural teeth.
                       </p>
                       <span class="service-slide__action">
-                        Ask our team
+                        Explore this service
                         <i aria-hidden="true"> ↗ </i>
                       </span>
                     </div>
@@ -629,10 +644,10 @@
                     decoding="async"
                     height="1200"
                     loading="lazy"
-                    src="assets/images/home/services/cosmetic-dentistry.webp"
+                    src="assets/images/home/services/cosmetic-dentistry.png"
                     width="960"
                   />
-                  <a class="service-slide__link" href="#contact">
+                  <a class="service-slide__link" href="pages/services.html#cosmetic-dentistry">
                     <span class="service-slide__index"> 05 </span>
                     <div class="service-slide__content">
                       <span class="service-slide__category">
@@ -644,7 +659,7 @@
                         designed around a natural-looking result.
                       </p>
                       <span class="service-slide__action">
-                        Discuss your smile
+                        Explore this service
                         <i aria-hidden="true"> ↗ </i>
                       </span>
                     </div>
@@ -658,10 +673,10 @@
                     decoding="async"
                     height="1200"
                     loading="lazy"
-                    src="assets/images/home/services/extractions-and-referrals.webp"
+                    src="assets/images/home/services/extractions-and-referrals.png"
                     width="960"
                   />
-                  <a class="service-slide__link" href="#contact">
+                  <a class="service-slide__link" href="pages/services.html#extractions-and-referrals">
                     <span class="service-slide__index"> 06 </span>
                     <div class="service-slide__content">
                       <span class="service-slide__category">
@@ -673,7 +688,7 @@
                         complex surgical, gum or orthodontic care.
                       </p>
                       <span class="service-slide__action">
-                        Contact reception
+                        Explore this service
                         <i aria-hidden="true"> ↗ </i>
                       </span>
                     </div>
@@ -684,6 +699,7 @@
           </div>
         </div>
       </section>
+
       <section class="section first-visit" id="new-patients">
         <div class="container">
           <div class="first-visit__top">
@@ -699,7 +715,7 @@
               </p>
               <a
                 class="text-link"
-                href="https://booking.au.hsone.app/soe/new?pid=AULHL01"
+                href="pages/booking.html"
               >
                 Book your first visit
                 <span aria-hidden="true"> ↗ </span>
@@ -711,7 +727,7 @@
                 decoding="async"
                 height="627"
                 loading="lazy"
-                src="assets/images/home/first-visit/first-visit-overview.webp"
+                src="assets/images/home/first-visit/first-visit-overview.png"
                 width="1400"
               />
               <figcaption>
@@ -730,7 +746,7 @@
                   decoding="async"
                   height="566"
                   loading="lazy"
-                  src="assets/images/home/first-visit/booking.webp"
+                  src="assets/images/home/first-visit/booking.png"
                   width="900"
                 />
                 <span class="visit-step__number"> 01 </span>
@@ -751,7 +767,7 @@
                   decoding="async"
                   height="566"
                   loading="lazy"
-                  src="assets/images/home/first-visit/welcome.webp"
+                  src="assets/images/home/first-visit/welcome.png"
                   width="900"
                 />
                 <span class="visit-step__number"> 02 </span>
@@ -772,7 +788,7 @@
                   decoding="async"
                   height="566"
                   loading="lazy"
-                  src="assets/images/home/first-visit/examination.webp"
+                  src="assets/images/home/first-visit/examination.png"
                   width="900"
                 />
                 <span class="visit-step__number"> 03 </span>
@@ -795,7 +811,7 @@
                   decoding="async"
                   height="566"
                   loading="lazy"
-                  src="assets/images/home/first-visit/care-plan.webp"
+                  src="assets/images/home/first-visit/care-plan.png"
                   width="900"
                 />
                 <span class="visit-step__number"> 04 </span>
@@ -826,6 +842,7 @@
           </div>
         </div>
       </section>
+
       <section class="section team" id="dentists">
         <div class="container">
           <div class="team__heading">
@@ -853,7 +870,7 @@
                   decoding="async"
                   height="653"
                   loading="lazy"
-                  src="assets/images/home/team/graeme-helms.webp"
+                  src="assets/images/home/team/graeme-helms.png"
                   width="560"
                 />
                 <div aria-hidden="true" class="team-card__image-overlay"></div>
@@ -875,8 +892,8 @@
                   a strong interest in continuing education and family-friendly
                   service.
                 </p>
-                <a class="team-card__link" href="#contact">
-                  Request an appointment
+                <a class="team-card__link" href="pages/dentists.html#graeme-helms">
+                  More about Graeme
                   <span aria-hidden="true"> ↗ </span>
                 </a>
               </div>
@@ -888,7 +905,7 @@
                   decoding="async"
                   height="653"
                   loading="lazy"
-                  src="assets/images/home/team/brendan-white.webp"
+                  src="assets/images/home/team/brendan-white.png"
                   width="560"
                 />
                 <div aria-hidden="true" class="team-card__image-overlay"></div>
@@ -910,8 +927,8 @@
                   federal Australian Dental Association councils and work
                   supporting practice accreditation.
                 </p>
-                <a class="team-card__link" href="#contact">
-                  Request an appointment
+                <a class="team-card__link" href="pages/dentists.html#brendan-white">
+                  More about Brendan
                   <span aria-hidden="true"> ↗ </span>
                 </a>
               </div>
@@ -923,7 +940,7 @@
                   decoding="async"
                   height="1200"
                   loading="lazy"
-                  src="assets/images/home/team/david-lee-placeholder.webp"
+                  src="assets/images/home/team/david-lee-placeholder.png"
                   width="900"
                 />
                 <div aria-hidden="true" class="team-card__image-overlay"></div>
@@ -944,8 +961,8 @@
                   biography and clinical-interest details can be added once they
                   have been supplied and approved for website use.
                 </p>
-                <a class="team-card__link" href="#contact">
-                  Request an appointment
+                <a class="team-card__link" href="pages/dentists.html#dongyoung-lee">
+                  More about Dongyoung
                   <span aria-hidden="true"> ↗ </span>
                 </a>
               </div>
@@ -953,6 +970,7 @@
           </div>
         </div>
       </section>
+      
       <section class="section payments" id="payments">
         <div class="container">
           <div class="payments__top">
@@ -1062,6 +1080,7 @@
           </div>
         </div>
       </section>
+
       <section class="section blog" id="blog">
         <div class="container">
           <div class="blog__heading">
@@ -1078,7 +1097,7 @@
                 emergencies, preventive care and making informed treatment
                 decisions.
               </p>
-              <a class="text-link" href="https://helmsandwhite.com.au/blog/">
+              <a class="text-link" href="pages/blog.html">
                 View all articles
                 <span aria-hidden="true"> ↗ </span>
               </a>
@@ -1090,7 +1109,7 @@
               <a
                 aria-label="Read the Lismore Emergency Dental Guide"
                 class="blog-card__image"
-                href="https://helmsandwhite.com.au/the-lismore-emergency-dental-guide-what-to-do-in-the-first-60-minutes-of-a-dental-crisis/"
+                href="pages/blog/emergency-dental-guide.html"
               >
                 <img
                   alt="Dental professional providing assistance after a sporting dental injury"
@@ -1109,7 +1128,7 @@
                 </div>
                 <h3>
                   <a
-                    href="https://helmsandwhite.com.au/the-lismore-emergency-dental-guide-what-to-do-in-the-first-60-minutes-of-a-dental-crisis/"
+                    href="pages/blog/emergency-dental-guide.html"
                   >
                     The Lismore Emergency Dental Guide: What to Do in the First
                     60 Minutes
@@ -1121,7 +1140,7 @@
                 </p>
                 <a
                   class="blog-card__link"
-                  href="https://helmsandwhite.com.au/the-lismore-emergency-dental-guide-what-to-do-in-the-first-60-minutes-of-a-dental-crisis/"
+                  href="pages/blog/emergency-dental-guide.html"
                 >
                   Read the guide
                   <span aria-hidden="true"> ↗ </span>
@@ -1133,7 +1152,7 @@
               <a
                 aria-label="Read the Dental Decoder article"
                 class="blog-card__image"
-                href="https://helmsandwhite.com.au/the-dental-decoder-how-honest-evidence-based-care-protects-your-smile-and-your-wallet/"
+                href="pages/blog/evidence-based-care.html"
               >
                 <img
                   alt="Bright modern dental treatment room"
@@ -1154,7 +1173,7 @@
                 </div>
                 <h3>
                   <a
-                    href="https://helmsandwhite.com.au/the-dental-decoder-how-honest-evidence-based-care-protects-your-smile-and-your-wallet/"
+                    href="pages/blog/evidence-based-care.html"
                   >
                     The Dental Decoder: How Evidence-Based Care Protects Your
                     Smile
@@ -1167,7 +1186,7 @@
                 </p>
                 <a
                   class="blog-card__link"
-                  href="https://helmsandwhite.com.au/the-dental-decoder-how-honest-evidence-based-care-protects-your-smile-and-your-wallet/"
+                  href="pages/blog/evidence-based-care.html"
                 >
                   Read the article
                   <span aria-hidden="true"> ↗ </span>
@@ -1194,7 +1213,7 @@
               </div>
               <a
                 class="button button--secondary"
-                href="https://helmsandwhite.com.au/blog/"
+                href="pages/blog.html"
               >
                 Visit the blog
               </a>
@@ -1202,6 +1221,7 @@
           </div>
         </div>
       </section>
+
       <section class="section contact" id="contact">
         <div class="container contact__grid">
           <div class="contact__content">
@@ -1370,7 +1390,9 @@
           </div>
         </div>
       </section>
+
     </main>
+
     <footer class="site-footer">
       <div class="container site-footer__main">
         <div class="site-footer__brand">
@@ -1406,24 +1428,24 @@
         </div>
         <nav aria-label="Footer navigation" class="site-footer__links">
           <h2>Explore</h2>
-          <a href="#our-story">
+          <a href="pages/our-story.html">
             <span> Our story </span>
             <i aria-hidden="true"> ↗ </i>
           </a>
-          <a href="#services">
+          <a href="pages/services.html">
             <span> Services </span>
             <i aria-hidden="true"> ↗ </i>
           </a>
-          <a href="#new-patients">
-            <span> New patients </span>
+          <a href="pages/payments.html">
+            <span> Payments </span>
             <i aria-hidden="true"> ↗ </i>
           </a>
-          <a href="#dentists">
+          <a href="pages/dentists.html">
             <span> Meet the dentists </span>
             <i aria-hidden="true"> ↗ </i>
           </a>
-          <a href="#blog">
-            <span> Dental advice </span>
+          <a href="pages/blog.html">
+            <span> Blog </span>
             <i aria-hidden="true"> ↗ </i>
           </a>
         </nav>
@@ -1463,7 +1485,7 @@
           </div>
           <a
             class="button button--white button--full"
-            href="https://booking.au.hsone.app/soe/new?pid=AULHL01"
+            href="pages/booking.html"
           >
             Book online
             <span aria-hidden="true"> ↗ </span>
@@ -1478,17 +1500,18 @@
         </p>
         <p class="site-footer__location">Lismore · Northern Rivers · NSW</p>
         <div class="site-footer__legal">
-          <a href="#"> Privacy </a>
-          <a href="#"> Accessibility </a>
+          <a href="pages/privacy.html"> Privacy </a>
+          <a href="pages/accessibility.html"> Accessibility </a>
         </div>
       </div>
     </footer>
     <div aria-label="Quick booking actions" class="mobile-actions">
       <a href="tel:+61266219933"> Call clinic </a>
-      <a href="https://booking.au.hsone.app/soe/new?pid=AULHL01">
+      <a href="pages/booking.html">
         Book online
       </a>
     </div>
+
     <script defer src="assets/js/site.js"></script>
     <script defer src="assets/js/pages/home.js"></script>
   </body>
