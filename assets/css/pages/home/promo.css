@@ -1,0 +1,1204 @@
+/* =========================================================
+   NEW PATIENT OFFER SECTION
+   ========================================================= */
+
+.new-patient-offer {
+  position: relative;
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.new-patient-offer__shell {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(420px, 0.82fr);
+
+  min-height: 620px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 30px;
+
+  background: #f7fbfb;
+
+  box-shadow: 0 26px 70px rgba(21, 52, 59, 0.1);
+}
+
+/* =========================================================
+   Offer image
+   ========================================================= */
+
+.new-patient-offer__media {
+  position: relative;
+
+  min-height: 620px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  background: var(--brand-deep);
+}
+
+.new-patient-offer__media > img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.new-patient-offer__media-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(10, 57, 65, 0.13) 0%,
+    rgba(10, 57, 65, 0.14) 35%,
+    rgba(5, 65, 74, 0.88) 100%
+  );
+}
+
+.new-patient-offer__media-content {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 38px;
+}
+
+.new-patient-offer__logo {
+  width: 145px;
+  height: auto;
+}
+
+.new-patient-offer__est {
+  position: absolute;
+
+  top: 36px;
+  right: 36px;
+
+  display: grid;
+
+  width: 82px;
+  height: 82px;
+
+  place-items: center;
+
+  padding: 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+
+  color: var(--white);
+
+  line-height: 1;
+  text-align: center;
+}
+
+.new-patient-offer__est span,
+.new-patient-offer__est small {
+  font-family: var(--font-heading);
+  font-size: 0.5rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.new-patient-offer__est strong {
+  font-family: var(--font-heading);
+  font-size: 1.48rem;
+  font-weight: 600;
+}
+
+.new-patient-offer__media-copy {
+  max-width: 460px;
+
+  margin-top: auto;
+
+  color: var(--white);
+}
+
+.new-patient-offer__media-copy > span {
+  display: block;
+
+  margin-bottom: 13px;
+
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.new-patient-offer__media-copy > strong {
+  display: block;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(2.3rem, 3.5vw, 4rem);
+  font-weight: 600;
+
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+/* =========================================================
+   Offer content
+   ========================================================= */
+
+.new-patient-offer__content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: clamp(40px, 5vw, 72px);
+}
+
+.new-patient-offer__heading h2 {
+  max-width: 490px;
+
+  margin: 0 0 17px;
+
+  color: var(--ink);
+
+  font-size: clamp(2.6rem, 4vw, 4.5rem);
+
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.new-patient-offer__heading > p:last-child {
+  max-width: 510px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 0.96rem;
+  line-height: 1.58;
+}
+
+/* =========================================================
+   Price
+   ========================================================= */
+
+.new-patient-offer__price-block {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 34px;
+
+  padding: 24px 0 26px;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.new-patient-offer__price {
+  display: flex;
+
+  align-items: flex-start;
+
+  color: var(--brand-deep);
+}
+
+.new-patient-offer__price sup {
+  margin-top: 8px;
+
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.new-patient-offer__price strong {
+  font-family: var(--font-heading);
+
+  font-size: clamp(4.6rem, 7vw, 6.6rem);
+
+  font-weight: 600;
+
+  line-height: 0.82;
+  letter-spacing: -0.07em;
+}
+
+.new-patient-offer__price-copy span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--brand);
+
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.new-patient-offer__price-copy strong {
+  color: var(--ink);
+
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+
+  line-height: 1.2;
+}
+
+/* =========================================================
+   Inclusions
+   ========================================================= */
+
+.new-patient-offer__inclusions {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 13px 20px;
+
+  margin: 27px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.new-patient-offer__inclusions li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--ink);
+
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.new-patient-offer__inclusions li span {
+  display: grid;
+
+  width: 23px;
+  height: 23px;
+
+  flex: 0 0 23px;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--brand-deep);
+  background: var(--aqua);
+
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+/* =========================================================
+   Actions
+   ========================================================= */
+
+.new-patient-offer__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  margin-top: 31px;
+}
+
+.new-patient-offer__call {
+  display: grid;
+
+  gap: 1px;
+
+  text-decoration: none;
+}
+
+.new-patient-offer__call small {
+  color: var(--text);
+
+  font-size: 0.67rem;
+}
+
+.new-patient-offer__call strong {
+  color: var(--brand-deep);
+
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+}
+
+.new-patient-offer__terms {
+  margin: 23px 0 0;
+
+  color: var(--text);
+
+  font-size: 0.65rem;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   PROMO MODAL
+   ========================================================= */
+
+.promo-modal[hidden] {
+  display: none;
+}
+
+.promo-modal {
+  position: fixed;
+  z-index: 9999;
+
+  inset: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: max(20px, env(safe-area-inset-top)) 20px
+    max(20px, env(safe-area-inset-bottom));
+
+  opacity: 0;
+
+  transition: opacity 360ms ease;
+}
+
+.promo-modal.is-open {
+  opacity: 1;
+}
+
+/* Backdrop */
+
+.promo-modal__backdrop {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(13, 34, 39, 0.68);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* =========================================================
+   Modal dialog
+   ========================================================= */
+
+.promo-modal__dialog {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.88fr)
+    minmax(440px, 1.12fr);
+
+  width: min(1050px, 94vw);
+  max-height: min(720px, 91vh);
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.68);
+
+  border-radius: 28px;
+
+  background: var(--white);
+
+  box-shadow: 0 40px 110px rgba(0, 0, 0, 0.34);
+
+  opacity: 0;
+
+  transform: translateY(28px) scale(0.965);
+
+  transition:
+    opacity 430ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 430ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.promo-modal.is-open .promo-modal__dialog {
+  opacity: 1;
+
+  transform: translateY(0) scale(1);
+}
+
+/* =========================================================
+   Close button
+   ========================================================= */
+
+.promo-modal__close {
+  position: absolute;
+  z-index: 10;
+
+  top: 17px;
+  right: 17px;
+
+  display: grid;
+
+  width: 40px;
+  height: 40px;
+
+  place-items: center;
+
+  padding: 0;
+
+  border: 1px solid rgba(21, 52, 59, 0.13);
+
+  border-radius: 50%;
+
+  color: var(--ink);
+
+  background: rgba(255, 255, 255, 0.92);
+
+  box-shadow: 0 8px 20px rgba(21, 52, 59, 0.1);
+
+  cursor: pointer;
+
+  transition:
+    transform var(--ease),
+    background-color var(--ease);
+}
+
+.promo-modal__close:hover {
+  transform: rotate(6deg);
+
+  background: var(--white);
+}
+
+.promo-modal__close span {
+  display: block;
+
+  margin-top: -2px;
+
+  font-size: 1.55rem;
+  font-weight: 300;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   Modal image
+   ========================================================= */
+
+.promo-modal__media {
+  position: relative;
+
+  min-height: 590px;
+
+  overflow: hidden;
+
+  background: var(--brand-deep);
+}
+
+.promo-modal__media > img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.promo-modal__media-shade {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(7, 67, 77, 0.1) 0%,
+    rgba(7, 67, 77, 0.08) 32%,
+    rgba(4, 65, 74, 0.86) 100%
+  );
+}
+
+.promo-modal__media-content {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 31px;
+}
+
+.promo-modal__logo {
+  width: 132px;
+  height: auto;
+}
+
+.promo-modal__est {
+  position: absolute;
+
+  top: 29px;
+  right: 27px;
+
+  display: grid;
+
+  width: 73px;
+  height: 73px;
+
+  place-items: center;
+
+  padding: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.66);
+
+  border-radius: 50%;
+
+  color: var(--white);
+
+  text-align: center;
+}
+
+.promo-modal__est span,
+.promo-modal__est small {
+  font-size: 0.43rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.promo-modal__est strong {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+.promo-modal__media-message {
+  margin-top: auto;
+
+  color: var(--white);
+}
+
+.promo-modal__media-message span {
+  display: block;
+
+  margin-bottom: 11px;
+
+  font-family: var(--font-heading);
+  font-size: 0.58rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.promo-modal__media-message strong {
+  display: block;
+
+  max-width: 355px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 3rem);
+
+  font-weight: 600;
+
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+/* =========================================================
+   Modal offer content
+   ========================================================= */
+
+.promo-modal__content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+
+  padding: 43px clamp(32px, 4vw, 56px);
+}
+
+.promo-modal__topline {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 21px;
+}
+
+.promo-modal__badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 29px;
+
+  padding: 6px 11px;
+
+  border-radius: 999px;
+
+  color: var(--white);
+  background: var(--brand-deep);
+
+  font-family: var(--font-heading);
+  font-size: 0.57rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.promo-modal__available {
+  color: var(--brand);
+
+  font-family: var(--font-heading);
+  font-size: 0.57rem;
+  font-weight: 750;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   Headline / $199
+   ========================================================= */
+
+.promo-modal__headline > p {
+  margin: 0 0 15px;
+
+  color: var(--ink);
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 2.6vw, 2.55rem);
+
+  font-weight: 600;
+
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.promo-modal__headline h2 {
+  display: flex;
+
+  align-items: center;
+
+  gap: 23px;
+
+  margin: 0;
+
+  color: inherit;
+}
+
+.promo-modal__price {
+  display: flex;
+
+  align-items: flex-start;
+
+  color: var(--brand-deep);
+
+  font-family: var(--font-heading);
+  font-size: clamp(4.8rem, 7vw, 6.8rem);
+
+  font-weight: 600;
+
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+}
+
+.promo-modal__price sup {
+  margin-top: 8px;
+
+  font-size: 0.3em;
+  font-weight: 700;
+
+  letter-spacing: 0;
+}
+
+.promo-modal__package {
+  display: block;
+
+  max-width: 170px;
+
+  color: var(--ink);
+
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.promo-modal__package small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--brand);
+
+  font-size: 0.54rem;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   Description
+   ========================================================= */
+
+.promo-modal__description {
+  max-width: 520px;
+
+  margin: 22px 0 0;
+
+  color: var(--text);
+
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.promo-modal__divider {
+  height: 1px;
+
+  margin: 23px 0 20px;
+
+  background: var(--border);
+}
+
+/* =========================================================
+   Package inclusions
+   ========================================================= */
+
+.promo-modal__includes-label {
+  margin: 0 0 12px;
+
+  color: var(--ink);
+
+  font-family: var(--font-heading);
+  font-size: 0.64rem;
+  font-weight: 750;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.promo-modal__includes {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 11px 16px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.promo-modal__includes li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-width: 0;
+
+  color: var(--ink);
+
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 650;
+}
+
+.promo-modal__includes li span {
+  display: grid;
+
+  width: 22px;
+  height: 22px;
+
+  flex: 0 0 22px;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--brand-deep);
+  background: var(--aqua);
+
+  font-size: 0.63rem;
+  font-weight: 900;
+}
+
+/* =========================================================
+   Modal CTAs
+   ========================================================= */
+
+.promo-modal__actions {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-top: 27px;
+}
+
+.promo-modal__actions .button {
+  width: 100%;
+
+  padding-inline: 17px;
+
+  white-space: nowrap;
+}
+
+.promo-modal__details-button {
+  color: var(--ink);
+
+  border: 1px solid rgba(21, 52, 59, 0.18);
+
+  background: var(--white);
+
+  box-shadow: 0 8px 20px rgba(21, 52, 59, 0.05);
+}
+
+.promo-modal__details-button:hover {
+  border-color: rgba(21, 52, 59, 0.34);
+
+  background: var(--aqua);
+}
+
+.promo-modal__contact {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 16px;
+
+  font-size: 0.69rem;
+}
+
+.promo-modal__contact > span {
+  color: var(--text);
+}
+
+.promo-modal__contact a {
+  color: var(--brand-deep);
+
+  font-family: var(--font-heading);
+  font-weight: 750;
+
+  text-decoration: none;
+}
+
+.promo-modal__terms {
+  margin: 16px 0 0;
+
+  color: var(--text);
+
+  font-size: 0.58rem;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   Prevent body scrolling while popup is open
+   ========================================================= */
+
+body.promo-modal-open {
+  overflow: hidden;
+}
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .new-patient-offer__shell {
+    grid-template-columns: 1fr;
+  }
+
+  .new-patient-offer__media {
+    min-height: 480px;
+  }
+
+  .promo-modal__dialog {
+    grid-template-columns:
+      minmax(250px, 0.75fr)
+      minmax(390px, 1fr);
+
+    width: min(900px, 95vw);
+  }
+
+  .promo-modal__content {
+    padding: 38px 30px;
+  }
+
+  .promo-modal__media-content {
+    padding: 25px;
+  }
+
+  .promo-modal__est {
+    display: none;
+  }
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 680px) {
+  .new-patient-offer__shell {
+    border-radius: 22px;
+  }
+
+  .new-patient-offer__media {
+    min-height: 390px;
+  }
+
+  .new-patient-offer__media-content {
+    padding: 24px;
+  }
+
+  .new-patient-offer__logo {
+    width: 120px;
+  }
+
+  .new-patient-offer__est {
+    top: 22px;
+    right: 22px;
+
+    width: 66px;
+    height: 66px;
+  }
+
+  .new-patient-offer__media-copy > strong {
+    font-size: clamp(2.15rem, 10vw, 3.15rem);
+  }
+
+  .new-patient-offer__content {
+    padding: 34px 22px;
+  }
+
+  .new-patient-offer__heading h2 {
+    font-size: clamp(2.4rem, 11vw, 3.3rem);
+  }
+
+  .new-patient-offer__price-block {
+    gap: 16px;
+
+    margin-top: 27px;
+  }
+
+  .new-patient-offer__price strong {
+    font-size: clamp(4.2rem, 20vw, 5.6rem);
+  }
+
+  .new-patient-offer__inclusions {
+    grid-template-columns: 1fr;
+  }
+
+  .new-patient-offer__actions {
+    display: grid;
+
+    gap: 16px;
+  }
+
+  .new-patient-offer__actions .button {
+    width: 100%;
+  }
+
+  /* Popup */
+
+  .promo-modal {
+    align-items: center;
+
+    padding: 14px;
+  }
+
+  .promo-modal__dialog {
+    display: block;
+
+    width: min(100%, 440px);
+    max-height: 92dvh;
+
+    overflow-y: auto;
+
+    border-radius: 22px;
+  }
+
+  .promo-modal__media {
+    min-height: 190px;
+    height: 190px;
+  }
+
+  .promo-modal__media > img {
+    object-position: center 36%;
+  }
+
+  .promo-modal__media-content {
+    padding: 20px;
+  }
+
+  .promo-modal__logo {
+    width: 105px;
+  }
+
+  .promo-modal__est {
+    display: grid;
+
+    top: 18px;
+    right: 18px;
+
+    width: 57px;
+    height: 57px;
+  }
+
+  .promo-modal__est strong {
+    font-size: 1rem;
+  }
+
+  .promo-modal__media-message span {
+    display: none;
+  }
+
+  .promo-modal__media-message strong {
+    max-width: 250px;
+
+    font-size: 1.55rem;
+  }
+
+  .promo-modal__content {
+    padding: 25px 20px 23px;
+  }
+
+  .promo-modal__topline {
+    margin-bottom: 16px;
+  }
+
+  .promo-modal__available {
+    display: none;
+  }
+
+  .promo-modal__headline > p {
+    margin-bottom: 12px;
+
+    font-size: 1.55rem;
+  }
+
+  .promo-modal__headline h2 {
+    gap: 15px;
+  }
+
+  .promo-modal__price {
+    font-size: clamp(4.1rem, 20vw, 5.4rem);
+  }
+
+  .promo-modal__package {
+    max-width: 130px;
+
+    font-size: 0.98rem;
+  }
+
+  .promo-modal__description {
+    margin-top: 17px;
+
+    font-size: 0.78rem;
+  }
+
+  .promo-modal__divider {
+    margin: 18px 0 16px;
+  }
+
+  .promo-modal__includes {
+    gap: 8px 10px;
+  }
+
+  .promo-modal__includes li {
+    font-size: 0.68rem;
+  }
+
+  .promo-modal__includes li span {
+    width: 19px;
+    height: 19px;
+
+    flex-basis: 19px;
+  }
+
+  .promo-modal__actions {
+    grid-template-columns: 1fr;
+
+    margin-top: 21px;
+  }
+
+  .promo-modal__actions .button {
+    min-height: 45px;
+  }
+
+  .promo-modal__close {
+    position: fixed;
+
+    top: max(20px, env(safe-area-inset-top));
+
+    right: 20px;
+  }
+}
+
+/* =========================================================
+   Very small phones
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .promo-modal__media {
+    height: 165px;
+    min-height: 165px;
+  }
+
+  .promo-modal__content {
+    padding: 21px 17px;
+  }
+
+  .promo-modal__headline > p {
+    font-size: 1.4rem;
+  }
+
+  .promo-modal__price {
+    font-size: 4rem;
+  }
+
+  .promo-modal__includes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   Reduced motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-modal,
+  .promo-modal__dialog {
+    transition: none;
+  }
+}

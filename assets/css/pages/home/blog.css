@@ -1,7 +1,7 @@
 .blog {
   padding-block: clamp(64px, 7vw, 96px);
   overflow: hidden;
-  background: var(--ivory);
+  background: var(--white);
 }
 
 .blog__heading {

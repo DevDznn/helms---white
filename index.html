@@ -1115,6 +1115,130 @@
         </div>
       </section>
 
+      <section
+        class="section new-patient-offer"
+        id="new-patient-offer"
+        aria-labelledby="new-patient-offer-title"
+      >
+        <div class="container">
+          <div class="new-patient-offer__shell">
+            <!-- Image -->
+            <figure class="new-patient-offer__media">
+              <img
+                src="assets/images/home/story/treatment-room.png"
+                alt="Treatment room at Helms and White Dental in Lismore"
+                width="1200"
+                height="1400"
+                loading="lazy"
+                decoding="async"
+              />
+
+              <div
+                class="new-patient-offer__media-overlay"
+                aria-hidden="true"
+              ></div>
+
+              <div class="new-patient-offer__media-content">
+                <img
+                  class="new-patient-offer__logo"
+                  src="assets/images/brand/logo-reversed.png"
+                  alt="Helms and White Dental"
+                  width="251"
+                  height="124"
+                  loading="lazy"
+                />
+
+                <div class="new-patient-offer__est">
+                  <span>EST.</span>
+                  <strong>1935</strong>
+                  <small>Lismore</small>
+                </div>
+
+                <div class="new-patient-offer__media-copy">
+                  <span>A trusted name, three generations on</span>
+
+                  <strong> Caring for Lismore smiles since 1935. </strong>
+                </div>
+              </div>
+            </figure>
+
+            <!-- Offer -->
+            <div class="new-patient-offer__content">
+              <div class="new-patient-offer__heading">
+                <p class="eyebrow">
+                  <span></span>
+                  New patient offer
+                </p>
+
+                <h2 id="new-patient-offer-title">Welcome to the family.</h2>
+
+                <p>
+                  A comprehensive first visit with the essentials for
+                  understanding your oral health and planning what comes next.
+                </p>
+              </div>
+
+              <div class="new-patient-offer__price-block">
+                <div class="new-patient-offer__price">
+                  <sup>$</sup>
+                  <strong>199</strong>
+                </div>
+
+                <div class="new-patient-offer__price-copy">
+                  <span>New patient</span>
+                  <strong>Check-up package</strong>
+                </div>
+              </div>
+
+              <ul
+                class="new-patient-offer__inclusions"
+                aria-label="Package inclusions"
+              >
+                <li>
+                  <span aria-hidden="true">✓</span>
+                  Full Examination
+                </li>
+
+                <li>
+                  <span aria-hidden="true">✓</span>
+                  Bitewing X-rays
+                </li>
+
+                <li>
+                  <span aria-hidden="true">✓</span>
+                  Scale &amp; clean
+                </li>
+
+                <li>
+                  <span aria-hidden="true">✓</span>
+                  Fluoride treatment
+                </li>
+              </ul>
+
+              <div class="new-patient-offer__actions">
+                <a
+                  class="button button--primary button--large"
+                  href="pages/booking.html"
+                >
+                  Book the $199 offer
+                  <span aria-hidden="true">↗</span>
+                </a>
+
+                <a class="new-patient-offer__call" href="tel:+61266219933">
+                  <small>Prefer to call?</small>
+                  <strong>(02) 6621 9933</strong>
+                </a>
+              </div>
+
+              <p class="new-patient-offer__terms">
+                New patients only. Mention this offer when booking. Standard
+                terms apply.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section class="section blog" id="blog">
         <div class="container">
           <div class="blog__heading">
@@ -1534,6 +1658,162 @@
     <div aria-label="Quick booking actions" class="mobile-actions">
       <a href="tel:+61266219933"> Call clinic </a>
       <a href="pages/booking.html"> Book online </a>
+    </div>
+
+    <!-- =========================================================
+     NEW PATIENT PROMO POPUP
+     Appears 5 seconds after viewing the hero
+     ========================================================= -->
+
+    <div class="promo-modal" data-js="promo-modal" hidden>
+      <div
+        class="promo-modal__backdrop"
+        data-js="promo-close"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="promo-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="promo-modal-title"
+        aria-describedby="promo-modal-description"
+      >
+        <!-- Close -->
+        <button
+          class="promo-modal__close"
+          data-js="promo-close"
+          type="button"
+          aria-label="Close new patient offer"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <!-- ===============================================
+         Image side
+         =============================================== -->
+
+        <div class="promo-modal__media">
+          <img
+            src="assets/images/home/first-visit/first-visit-overview.png"
+            alt="Welcoming care at Helms and White Dental"
+            width="1400"
+            height="627"
+            decoding="async"
+          />
+
+          <div class="promo-modal__media-shade" aria-hidden="true"></div>
+
+          <div class="promo-modal__media-content">
+            <img
+              class="promo-modal__logo"
+              src="assets/images/brand/logo-reversed.png"
+              alt="Helms and White Dental"
+              width="251"
+              height="124"
+            />
+
+            <div class="promo-modal__est">
+              <span>EST.</span>
+              <strong>1935</strong>
+              <small>Lismore</small>
+            </div>
+
+            <div class="promo-modal__media-message">
+              <span> A trusted name, three generations on </span>
+
+              <strong> Caring for Lismore smiles since 1935. </strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===============================================
+         Offer content
+         =============================================== -->
+
+        <div class="promo-modal__content">
+          <div class="promo-modal__topline">
+            <span class="promo-modal__badge"> New patient offer </span>
+
+            <span class="promo-modal__available"> New patients welcome </span>
+          </div>
+
+          <div class="promo-modal__headline">
+            <p>Welcome to the family.</p>
+
+            <h2 id="promo-modal-title">
+              <span class="promo-modal__price"> <sup>$</sup>199 </span>
+
+              <span class="promo-modal__package">
+                <small>New patient</small>
+                Check-up package
+              </span>
+            </h2>
+          </div>
+
+          <p class="promo-modal__description" id="promo-modal-description">
+            Start your care with a comprehensive new-patient visit at Helms
+            &amp; White Dental in Lismore.
+          </p>
+
+          <div class="promo-modal__divider"></div>
+
+          <p class="promo-modal__includes-label">Your package includes</p>
+
+          <ul class="promo-modal__includes">
+            <li>
+              <span aria-hidden="true">✓</span>
+              Full Examination
+            </li>
+
+            <li>
+              <span aria-hidden="true">✓</span>
+              Bitewing X-rays
+            </li>
+
+            <li>
+              <span aria-hidden="true">✓</span>
+              Scale &amp; clean
+            </li>
+
+            <li>
+              <span aria-hidden="true">✓</span>
+              Fluoride treatment
+            </li>
+          </ul>
+
+          <!-- Two CTAs -->
+          <div class="promo-modal__actions">
+            <a
+              class="button button--primary button--large"
+              href="pages/booking.html"
+            >
+              Book the $199 offer
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              class="button promo-modal__details-button button--large"
+              href="#new-patient-offer"
+              data-js="promo-details"
+            >
+              More offer details
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="promo-modal__contact">
+            <span>Questions?</span>
+
+            <a href="tel:+61266219933"> Call (02) 6621 9933 </a>
+          </div>
+
+          <p class="promo-modal__terms">
+            New patients only. Mention this offer when booking. Standard terms
+            apply.
+          </p>
+        </div>
+      </div>
     </div>
 
     <script defer src="assets/js/site.js"></script>
