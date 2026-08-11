@@ -1,13 +1,18 @@
+/* =========================================================
+   Trust strip
+   ========================================================= */
+
 .trust-strip {
   position: relative;
+  overflow: hidden;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: var(--white);
 }
 
-/* Small branded accent */
 .trust-strip::before {
   position: absolute;
+  z-index: 5;
   top: -1px;
   left: 50%;
   width: 72px;
@@ -18,66 +23,55 @@
   transform: translateX(-50%);
 }
 
-.trust-strip__grid {
+/* =========================================================
+   Desktop viewport
+   ========================================================= */
+
+.trust-strip__viewport {
+  width: var(--container);
+  max-width: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+/* =========================================================
+   Desktop layout
+   ========================================================= */
+
+.trust-strip__track {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.trust-strip article {
+.trust-strip__item {
   display: grid;
   grid-template-columns: 54px minmax(0, 1fr);
+  min-width: 0;
   min-height: 132px;
   align-items: center;
   gap: 18px;
   padding: 26px 28px;
+  background: var(--white);
+
   transition:
     background-color var(--ease),
     transform var(--ease);
 }
 
-.trust-strip article:hover {
+.trust-strip__item + .trust-strip__item {
+  border-left: 1px solid var(--border);
+}
+
+.trust-strip__item:hover {
   background: rgba(234, 249, 251, 0.58);
 }
 
-.trust-strip article:hover .trust-strip__visual {
+.trust-strip__item:hover .trust-strip__visual {
   transform: translateY(-2px);
 }
 
-.trust-strip__visual {
-  transition: transform var(--ease);
-}
-
-
-.trust-strip__number,
-.trust-strip__icon {
-  display: grid;
-  width: 52px;
-  height: 52px;
-  place-items: center;
-  color: var(--brand-deep);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background: var(--white);
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.04em;
-}
-
-.trust-strip__icon {
-  font-size: 1.35rem;
-}
-
-.trust-strip p {
-  max-width: 230px;
-  color: var(--text);
-  font-size: 0.82rem;
-  line-height: 1.45;
-}
-
 /* =========================================================
-   Highlight visuals
+   Visual
    ========================================================= */
 
 .trust-strip__visual {
@@ -87,9 +81,8 @@
   height: 54px;
   place-items: center;
   flex: 0 0 54px;
+  transition: transform var(--ease);
 }
-
-/* Small detail adds interest without making it busy */
 
 .trust-strip__visual::after {
   position: absolute;
@@ -109,8 +102,10 @@
   width: 52px;
   height: 52px;
   place-items: center;
+
   border: 1px solid var(--border);
   border-radius: 50%;
+
   color: var(--brand-deep);
   background: var(--white);
 }
@@ -123,10 +118,9 @@
   letter-spacing: -0.04em;
 }
 
-/* Prevent SVG from appearing as a solid shape */
-
 .trust-strip__icon {
   padding: 13px;
+
   fill: none;
   stroke: currentColor;
   stroke-width: 1.75;
@@ -134,14 +128,14 @@
   stroke-linejoin: round;
 }
 
-/* Slightly distinguish the guidance item */
-
 .trust-strip__visual--guidance .trust-strip__icon {
   border-color: rgba(1, 181, 204, 0.22);
   background: var(--aqua);
 }
 
-/* Content hierarchy */
+/* =========================================================
+   Content
+   ========================================================= */
 
 .trust-strip__content {
   min-width: 0;
@@ -150,7 +144,9 @@
 .trust-strip__label {
   display: block;
   margin-bottom: 3px;
+
   color: var(--ink);
+
   font-family: var(--font-heading);
   font-size: 0.9rem;
   font-weight: 650;
@@ -159,81 +155,143 @@
 
 .trust-strip p {
   max-width: 230px;
+  margin: 0;
+
   color: var(--text);
+
   font-size: 0.79rem;
   line-height: 1.45;
 }
 
-/* Tablet */
 
-@media (max-width: 1120px) {
-  .trust-strip__grid {
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 1120px) and (min-width: 681px) {
+  .trust-strip__track {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .trust-strip article:nth-child(3) {
+  .trust-strip__item:nth-child(3),
+  .trust-strip__item:nth-child(4) {
     border-top: 1px solid var(--border);
-    border-left: 0;
   }
 
-  .trust-strip article:nth-child(4) {
-    border-top: 1px solid var(--border);
+  .trust-strip__item:nth-child(3) {
+    border-left: 0;
   }
 }
 
-/* Mobile */
+
+/* =========================================================
+   Mobile — infinite carousel
+   ========================================================= */
 
 @media (max-width: 680px) {
-  .trust-strip__grid {
-    grid-template-columns: 1fr;
+  .trust-strip__viewport {
+    width: 100%;
+    max-width: none;
+    overflow: hidden;
   }
 
-  .trust-strip article {
-    grid-template-columns: 46px 1fr;
+  .trust-strip__track {
+    display: flex;
+    grid-template-columns: none;
+
+    width: max-content;
+
+    gap: 10px;
+
+    padding: 0 12px;
+
+    will-change: transform;
+  }
+
+  .trust-strip__item {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+
+    /*
+     * Keep every card in ONE horizontal row.
+     * The next card remains slightly visible.
+     */
+    width: min(82vw, 340px);
+    min-width: min(82vw, 340px);
     min-height: 104px;
-    gap: 15px;
-    padding: 19px 16px;
+
+    flex: 0 0 min(82vw, 340px);
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px 16px;
+
+    border: 0 !important;
+    border-right: 1px solid var(--border) !important;
+
+    background: var(--white);
   }
 
-  .trust-strip article + article,
-  .trust-strip article:nth-child(3),
-  .trust-strip article:nth-child(4) {
-    border-top: 1px solid var(--border);
-    border-left: 0;
+  .trust-strip__visual {
+    width: 42px;
+    height: 42px;
   }
 
   .trust-strip__number,
   .trust-strip__icon {
-    width: 44px;
-    height: 44px;
-    font-size: 1.05rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .trust-strip__number {
+    font-size: 0.96rem;
+  }
+
+  .trust-strip__icon {
+    padding: 9px;
+  }
+
+  .trust-strip__label {
+    margin-bottom: 2px;
+
+    font-size: 0.79rem;
+    line-height: 1.25;
   }
 
   .trust-strip p {
     max-width: none;
-    font-size: 0.78rem;
-  }
 
-  .trust-strip__visual {
-    width: 46px;
-    height: 46px;
+    font-size: 0.7rem;
+    line-height: 1.38;
   }
+}
 
-  .trust-strip__number,
-  .trust-strip__icon {
-    width: 44px;
-    height: 44px;
+
+/* =========================================================
+   Very small mobile
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .trust-strip__item {
+    width: 86vw;
+    min-width: 86vw;
+    flex-basis: 86vw;
+
+    min-height: 100px;
+
+    padding: 14px;
   }
+}
 
-  .trust-strip__icon {
-    padding: 11px;
-  }
 
-  .trust-strip__number {
-    font-size: 1.05rem;
-  }
+/* =========================================================
+   Reduced motion
+   ========================================================= */
 
-  .trust-strip__label {
-    font-size: 0.84rem;
+@media (prefers-reduced-motion: reduce) {
+  .trust-strip__track {
+    transform: none !important;
   }
 }
