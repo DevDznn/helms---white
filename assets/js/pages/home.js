@@ -61,10 +61,30 @@
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      status.textContent =
-        "Demo only: connect this form to your website or CRM before launch.";
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
 
+      const data = new FormData(form);
+      const service = data.get("service") || "General appointment enquiry";
+      const body = [
+        `Name: ${data.get("name") || ""}`,
+        `Phone: ${data.get("phone") || ""}`,
+        `Email: ${data.get("email") || ""}`,
+        `Enquiry: ${service}`,
+        "",
+        data.get("message") || "",
+      ].join("\n");
+
+      status.textContent =
+        "Your email app is opening. Review the message before sending it to reception.";
       status.classList.add("is-success");
+
+      window.location.href =
+        "mailto:reception@helmsandwhite.com.au" +
+        `?subject=${encodeURIComponent(`Website enquiry – ${service}`)}` +
+        `&body=${encodeURIComponent(body)}`;
     });
   };
 

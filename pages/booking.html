@@ -6,11 +6,12 @@
 
     <meta
       name="description"
-      content="Request a dental appointment with Helms & White Dental in Lismore using a simple step-by-step booking form."
+      content="Book a dental appointment with Helms & White Dental in Lismore and continue to the practice’s secure online booking system."
     />
     <meta name="theme-color" content="#ffffff" />
 
-    <title>Book an Appointment | Helms &amp; White Dental</title>
+    <title>Book a Dentist in Lismore | Helms &amp; White Dental</title>
+    <link rel="canonical" href="https://helmsandwhite.com.au/pages/booking.html" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,8 +28,13 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Book an Appointment | Helms & White Dental",
-        "description": "Request a dental appointment with Helms & White Dental in Lismore.",
-        "url": "https://helmsandwhite.com.au/booking/",
+        "description": "Book a dental appointment with Helms & White Dental in Lismore using the practice’s secure online booking system.",
+        "url": "https://helmsandwhite.com.au/pages/booking.html",
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": "https://booking.au.hsone.app/soe/new?pid=AULHL01",
+          "name": "Book a dental appointment"
+        },
         "about": {
           "@type": "Dentist",
           "name": "Helms & White Dental",
@@ -54,7 +60,7 @@
       <div class="container site-header__inner">
         <a
           class="site-header__brand"
-          href="../index.html"
+          href="/"
           aria-label="Helms and White Dental home"
         >
           <img
@@ -197,7 +203,7 @@
 
             <!--
               Connect this form to your preferred backend or form service.
-              The action="#" value is a front-end placeholder.
+              This wizard helps patients review appointment preferences. Final booking opens the practice’s secure online booking provider; form data is not sent from this page.
             -->
             <form
               class="booking-form"
@@ -816,10 +822,10 @@
                 </div>
 
                 <div class="booking-review__notice">
-                  <strong>This does not confirm the appointment.</strong>
+                  <strong>Final booking happens securely online.</strong>
                   <p>
-                    Reception will check service length, dentist availability
-                    and your preferred date before contacting you.
+                    Continue to Helms &amp; White Dental’s secure booking system to
+                    choose an available appointment and submit your details.
                   </p>
                 </div>
 
@@ -855,7 +861,7 @@
                   data-booking-submit
                   hidden
                 >
-                  Send appointment request
+                  Continue to secure booking
                 </button>
               </div>
 
@@ -974,8 +980,6 @@
         </p>
         <p class="site-footer__location">Lismore · Northern Rivers · NSW</p>
         <div class="site-footer__legal">
-          <a href="privacy.html"> Privacy </a>
-          <a href="accessibility.html"> Accessibility </a>
         </div>
       </div>
     </footer>

@@ -1,5 +1,7 @@
 (() => {
   const form = document.querySelector("#booking-form");
+  const ONLINE_BOOKING_URL =
+    "https://booking.au.hsone.app/soe/new?pid=AULHL01";
 
   if (!form) return;
 
@@ -253,21 +255,14 @@
   });
 
   form.addEventListener("submit", (event) => {
-    if (!validateStep(currentStep)) {
-      event.preventDefault();
-      return;
-    }
+    event.preventDefault();
 
-    if (form.getAttribute("action") === "#") {
-      event.preventDefault();
+    if (!validateStep(currentStep)) return;
 
-      const error = getStep(currentStep)?.querySelector("[data-step-error]");
-
-      if (error) {
-        error.textContent =
-          "The booking flow is complete, but the form still needs to be connected to your form service or booking backend.";
-      }
-    }
+    // Do not transmit the locally entered patient details in a URL/query string.
+    // The verified Helms & White booking provider collects the required details
+    // on its own secure booking flow.
+    window.location.assign(ONLINE_BOOKING_URL);
   });
 
   showStep(1, { focus: false, scroll: false });
