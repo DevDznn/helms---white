@@ -140,12 +140,12 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(3.2rem, 6.1vw, 6.5rem);
+  font-size: clamp(2.3rem, 4.2vw, 4.4rem) !important;
 }
 
 h2 {
   margin-bottom: 24px;
-  font-size: clamp(2.3rem, 4.2vw, 4.4rem);
+  font-size: clamp(2.0rem, 3.9vw, 4.1rem);
 }
 
 h3,
@@ -197,7 +197,7 @@ p {
   }
 
   h1 {
-    font-size: clamp(2.8rem, 14vw, 4.4rem);
+    font-size: clamp(2.15rem, 10vw, 3.25rem);
   }
 
   h2 {
