@@ -1,0 +1,349 @@
+{
+  "converted_count": 57,
+  "original_bytes": 113063572,
+  "webp_bytes": 5567652,
+  "files": [
+    {
+      "from": "assets/images/dentists/dentists-hero.png",
+      "to": "assets/images/dentists/dentists-hero.webp",
+      "before": 2221162,
+      "after": 143390
+    },
+    {
+      "from": "assets/images/dentists/sabrina.png",
+      "to": "assets/images/dentists/sabrina.webp",
+      "before": 2269244,
+      "after": 90142
+    },
+    {
+      "from": "assets/images/home/first-visit/booking.png",
+      "to": "assets/images/home/first-visit/booking.webp",
+      "before": 1831513,
+      "after": 77108
+    },
+    {
+      "from": "assets/images/home/first-visit/care-plan.png",
+      "to": "assets/images/home/first-visit/care-plan.webp",
+      "before": 1917487,
+      "after": 84176
+    },
+    {
+      "from": "assets/images/home/first-visit/examination.png",
+      "to": "assets/images/home/first-visit/examination.webp",
+      "before": 1743860,
+      "after": 48868
+    },
+    {
+      "from": "assets/images/home/first-visit/first-visit-overview.png",
+      "to": "assets/images/home/first-visit/first-visit-overview.webp",
+      "before": 2039509,
+      "after": 101638
+    },
+    {
+      "from": "assets/images/home/first-visit/welcome.png",
+      "to": "assets/images/home/first-visit/welcome.webp",
+      "before": 2335862,
+      "after": 122668
+    },
+    {
+      "from": "assets/images/home/intro/clinic-interior.png",
+      "to": "assets/images/home/intro/clinic-interior.webp",
+      "before": 2058861,
+      "after": 119378
+    },
+    {
+      "from": "assets/images/home/services/cosmetic-dentistry.png",
+      "to": "assets/images/home/services/cosmetic-dentistry.webp",
+      "before": 1610782,
+      "after": 44482
+    },
+    {
+      "from": "assets/images/home/services/crowns-and-inlays.png",
+      "to": "assets/images/home/services/crowns-and-inlays.webp",
+      "before": 1619413,
+      "after": 33554
+    },
+    {
+      "from": "assets/images/home/services/extractions-and-referrals.png",
+      "to": "assets/images/home/services/extractions-and-referrals.webp",
+      "before": 2049364,
+      "after": 103536
+    },
+    {
+      "from": "assets/images/home/services/preventive-care.png",
+      "to": "assets/images/home/services/preventive-care.webp",
+      "before": 1676107,
+      "after": 60058
+    },
+    {
+      "from": "assets/images/home/services/restorations.png",
+      "to": "assets/images/home/services/restorations.webp",
+      "before": 1774240,
+      "after": 73820
+    },
+    {
+      "from": "assets/images/home/services/root-canal.png",
+      "to": "assets/images/home/services/root-canal.webp",
+      "before": 1593320,
+      "after": 48018
+    },
+    {
+      "from": "assets/images/home/services/services-overview.png",
+      "to": "assets/images/home/services/services-overview.webp",
+      "before": 2149933,
+      "after": 119576
+    },
+    {
+      "from": "assets/images/home/story/consultation.png",
+      "to": "assets/images/home/story/consultation.webp",
+      "before": 2067612,
+      "after": 95436
+    },
+    {
+      "from": "assets/images/home/story/reception.png",
+      "to": "assets/images/home/story/reception.webp",
+      "before": 2032983,
+      "after": 100850
+    },
+    {
+      "from": "assets/images/home/story/treatment-room.png",
+      "to": "assets/images/home/story/treatment-room.webp",
+      "before": 2057353,
+      "after": 118890
+    },
+    {
+      "from": "assets/images/home/team/brendan-white.png",
+      "to": "assets/images/home/team/brendan-white.webp",
+      "before": 2672205,
+      "after": 273750
+    },
+    {
+      "from": "assets/images/home/team/graeme-helms.png",
+      "to": "assets/images/home/team/graeme-helms.webp",
+      "before": 2500684,
+      "after": 175362
+    },
+    {
+      "from": "assets/images/our-story/dentists-together.png",
+      "to": "assets/images/our-story/dentists-together.webp",
+      "before": 2305816,
+      "after": 155304
+    },
+    {
+      "from": "assets/images/our-story/modern-practice.png",
+      "to": "assets/images/our-story/modern-practice.webp",
+      "before": 2082175,
+      "after": 111892
+    },
+    {
+      "from": "assets/images/our-story/our-story-hero.png",
+      "to": "assets/images/our-story/our-story-hero.webp",
+      "before": 1486214,
+      "after": 93696
+    },
+    {
+      "from": "assets/images/our-story/our-team-at-work.png",
+      "to": "assets/images/our-story/our-team-at-work.webp",
+      "before": 1981738,
+      "after": 90920
+    },
+    {
+      "from": "assets/images/our-story/patient-conversation.png",
+      "to": "assets/images/our-story/patient-conversation.webp",
+      "before": 2016892,
+      "after": 110128
+    },
+    {
+      "from": "assets/images/our-story/practice-history.png",
+      "to": "assets/images/our-story/practice-history.webp",
+      "before": 2790805,
+      "after": 240378
+    },
+    {
+      "from": "assets/images/our-story/values-patient-care.png",
+      "to": "assets/images/our-story/values-patient-care.webp",
+      "before": 2348219,
+      "after": 163492
+    },
+    {
+      "from": "assets/images/our-story/values-team-detail.png",
+      "to": "assets/images/our-story/values-team-detail.webp",
+      "before": 2068220,
+      "after": 98708
+    },
+    {
+      "from": "assets/images/payments/payment-planning.png",
+      "to": "assets/images/payments/payment-planning.webp",
+      "before": 2114266,
+      "after": 109496
+    },
+    {
+      "from": "assets/images/payments/payments-hero.png",
+      "to": "assets/images/payments/payments-hero.webp",
+      "before": 2109057,
+      "after": 111682
+    },
+    {
+      "from": "assets/images/services/cosmetic-dentistry-02.png",
+      "to": "assets/images/services/cosmetic-dentistry-02.webp",
+      "before": 1824831,
+      "after": 36814
+    },
+    {
+      "from": "assets/images/services/cosmetic-dentistry-03.png",
+      "to": "assets/images/services/cosmetic-dentistry-03.webp",
+      "before": 2095306,
+      "after": 97346
+    },
+    {
+      "from": "assets/images/services/cosmetic-dentistry-04.png",
+      "to": "assets/images/services/cosmetic-dentistry-04.webp",
+      "before": 1641410,
+      "after": 46476
+    },
+    {
+      "from": "assets/images/services/cosmetic-dentistry.png",
+      "to": "assets/images/services/cosmetic-dentistry.webp",
+      "before": 1907999,
+      "after": 82656
+    },
+    {
+      "from": "assets/images/services/crowns-inlays-onlays-02.png",
+      "to": "assets/images/services/crowns-inlays-onlays-02.webp",
+      "before": 1693000,
+      "after": 52480
+    },
+    {
+      "from": "assets/images/services/crowns-inlays-onlays-03.png",
+      "to": "assets/images/services/crowns-inlays-onlays-03.webp",
+      "before": 1662491,
+      "after": 46798
+    },
+    {
+      "from": "assets/images/services/crowns-inlays-onlays-04.png",
+      "to": "assets/images/services/crowns-inlays-onlays-04.webp",
+      "before": 1699783,
+      "after": 50886
+    },
+    {
+      "from": "assets/images/services/crowns-inlays-onlays.png",
+      "to": "assets/images/services/crowns-inlays-onlays.webp",
+      "before": 1951538,
+      "after": 84902
+    },
+    {
+      "from": "assets/images/services/extractions-referrals-02.png",
+      "to": "assets/images/services/extractions-referrals-02.webp",
+      "before": 2185540,
+      "after": 102558
+    },
+    {
+      "from": "assets/images/services/extractions-referrals-03.png",
+      "to": "assets/images/services/extractions-referrals-03.webp",
+      "before": 1896026,
+      "after": 70524
+    },
+    {
+      "from": "assets/images/services/extractions-referrals-04.png",
+      "to": "assets/images/services/extractions-referrals-04.webp",
+      "before": 1988758,
+      "after": 93756
+    },
+    {
+      "from": "assets/images/services/extractions-referrals.png",
+      "to": "assets/images/services/extractions-referrals.webp",
+      "before": 1986921,
+      "after": 86844
+    },
+    {
+      "from": "assets/images/services/preventive-care-02.png",
+      "to": "assets/images/services/preventive-care-02.webp",
+      "before": 2098343,
+      "after": 140084
+    },
+    {
+      "from": "assets/images/services/preventive-care-03.png",
+      "to": "assets/images/services/preventive-care-03.webp",
+      "before": 1912993,
+      "after": 77484
+    },
+    {
+      "from": "assets/images/services/preventive-care-04.png",
+      "to": "assets/images/services/preventive-care-04.webp",
+      "before": 1932899,
+      "after": 94576
+    },
+    {
+      "from": "assets/images/services/preventive-care.png",
+      "to": "assets/images/services/preventive-care.webp",
+      "before": 2087898,
+      "after": 103182
+    },
+    {
+      "from": "assets/images/services/restorative-treatment-02.png",
+      "to": "assets/images/services/restorative-treatment-02.webp",
+      "before": 1657785,
+      "after": 57704
+    },
+    {
+      "from": "assets/images/services/restorative-treatment-03.png",
+      "to": "assets/images/services/restorative-treatment-03.webp",
+      "before": 1924113,
+      "after": 92330
+    },
+    {
+      "from": "assets/images/services/restorative-treatment-04.png",
+      "to": "assets/images/services/restorative-treatment-04.webp",
+      "before": 1677342,
+      "after": 62826
+    },
+    {
+      "from": "assets/images/services/restorative-treatment.png",
+      "to": "assets/images/services/restorative-treatment.webp",
+      "before": 2389450,
+      "after": 168090
+    },
+    {
+      "from": "assets/images/services/root-canal-treatment-02.png",
+      "to": "assets/images/services/root-canal-treatment-02.webp",
+      "before": 1705858,
+      "after": 69450
+    },
+    {
+      "from": "assets/images/services/root-canal-treatment-03.png",
+      "to": "assets/images/services/root-canal-treatment-03.webp",
+      "before": 2197928,
+      "after": 134692
+    },
+    {
+      "from": "assets/images/services/root-canal-treatment-04.png",
+      "to": "assets/images/services/root-canal-treatment-04.webp",
+      "before": 1690997,
+      "after": 51760
+    },
+    {
+      "from": "assets/images/services/root-canal-treatment.png",
+      "to": "assets/images/services/root-canal-treatment.webp",
+      "before": 1886175,
+      "after": 75906
+    },
+    {
+      "from": "assets/images/services/services-hero.png",
+      "to": "assets/images/services/services-hero.webp",
+      "before": 2274090,
+      "after": 150984
+    },
+    {
+      "from": "assets/images/services/urgent-dental-care.png",
+      "to": "assets/images/services/urgent-dental-care.webp",
+      "before": 1974009,
+      "after": 82550
+    },
+    {
+      "from": "assets/images/home/team/david-lee-placeholder.png",
+      "to": "assets/images/home/team/dongyoung-lee.webp",
+      "before": 1595193,
+      "after": 33598
+    }
+  ]
+}
